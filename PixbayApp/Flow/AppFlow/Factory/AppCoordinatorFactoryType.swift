@@ -9,5 +9,8 @@
 import Foundation
 
 protocol AppCoordinatorFactoryType {
-    // TODO
+    func makeOnboardingCoordinator(router: RouterType,
+                                   dependencies: OnboardingCoordinator.Dependencies,
+                                   moduleFactory: OnboardingCoordinatorModuleFactoryType)
+    -> Coordinator & OnboardingCoordinatorOutput
 }

@@ -33,7 +33,6 @@
 		900572A824D311D9002AE9BC /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572A524D311D9002AE9BC /* Reachability.swift */; };
 		900572A924D311D9002AE9BC /* RxSwift + URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572A624D311D9002AE9BC /* RxSwift + URLSession.swift */; };
 		900572AE24D312CF002AE9BC /* ErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572AD24D312CF002AE9BC /* ErrorCode.swift */; };
-		900572B324D3133F002AE9BC /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572AF24D3133F002AE9BC /* CameraService.swift */; };
 		900572B424D3133F002AE9BC /* NetfoxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572B024D3133F002AE9BC /* NetfoxService.swift */; };
 		900572B524D3133F002AE9BC /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572B124D3133F002AE9BC /* UserSettings.swift */; };
 		900572B924D313CE002AE9BC /* UIViewController+KeyboardAvoidance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572B824D313CE002AE9BC /* UIViewController+KeyboardAvoidance.swift */; };
@@ -52,6 +51,60 @@
 		900572E024D31EC6002AE9BC /* AppCoordinatorFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572DF24D31EC6002AE9BC /* AppCoordinatorFactoryType.swift */; };
 		900572E224D31EDB002AE9BC /* AppCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572E124D31EDB002AE9BC /* AppCoordinatorFactory.swift */; };
 		900572E424D31F65002AE9BC /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572E324D31F65002AE9BC /* AppEnvironment.swift */; };
+		9038000024D328D9009F9033 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038FFFD24D328D9009F9033 /* OnboardingViewModel.swift */; };
+		9038000424D329B0009F9033 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9038000324D329B0009F9033 /* Localizable.strings */; };
+		9038000624D329D8009F9033 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038000524D329D8009F9033 /* String+Localization.swift */; };
+		9038000A24D32B81009F9033 /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038000924D32B81009F9033 /* StoryboardLoadable.swift */; };
+		9038000D24D32B8F009F9033 /* ValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038000B24D32B8F009F9033 /* ValidationType.swift */; };
+		9038000E24D32B8F009F9033 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038000C24D32B8F009F9033 /* Validator.swift */; };
+		9038001024D32C0A009F9033 /* UIViewController+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038000F24D32C0A009F9033 /* UIViewController+Protocols.swift */; };
+		9038001324D333B2009F9033 /* UIColors+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038001224D333B2009F9033 /* UIColors+AppColors.swift */; };
+		9038001624D33810009F9033 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038001524D33810009F9033 /* TextField.swift */; };
+		9038001824D3386A009F9033 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038001724D3386A009F9033 /* Fonts.swift */; };
+		9038001A24D338B4009F9033 /* UITextField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038001924D338B4009F9033 /* UITextField+Style.swift */; };
+		9038001C24D33918009F9033 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038001B24D33918009F9033 /* UILabel+Style.swift */; };
+		9038001F24D339A3009F9033 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038001E24D339A3009F9033 /* UIView+Extensions.swift */; };
+		9038004024D346FD009F9033 /* Gotham-Light 2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038002224D346FD009F9033 /* Gotham-Light 2.otf */; };
+		9038004124D346FD009F9033 /* Gotham-Light 3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038002324D346FD009F9033 /* Gotham-Light 3.otf */; };
+		9038004224D346FD009F9033 /* Gotham-Book 3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038002424D346FD009F9033 /* Gotham-Book 3.otf */; };
+		9038004324D346FD009F9033 /* Gotham-Book 2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038002524D346FD009F9033 /* Gotham-Book 2.otf */; };
+		9038004424D346FD009F9033 /* Gotham-Bold 2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038002624D346FD009F9033 /* Gotham-Bold 2.otf */; };
+		9038004524D346FD009F9033 /* Gotham-Bold 3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038002724D346FD009F9033 /* Gotham-Bold 3.otf */; };
+		9038004624D346FD009F9033 /* Gotham-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038002824D346FD009F9033 /* Gotham-Thin.otf */; };
+		9038004724D346FD009F9033 /* Gotham-LightItalic 2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038002924D346FD009F9033 /* Gotham-LightItalic 2.otf */; };
+		9038004824D346FD009F9033 /* Gotham-LightItalic 3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038002A24D346FD009F9033 /* Gotham-LightItalic 3.otf */; };
+		9038004924D346FD009F9033 /* Gotham-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038002B24D346FD009F9033 /* Gotham-Black.otf */; };
+		9038004A24D346FD009F9033 /* Gotham-BoldItalic 3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038002C24D346FD009F9033 /* Gotham-BoldItalic 3.otf */; };
+		9038004B24D346FD009F9033 /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038002D24D346FD009F9033 /* Gotham-Medium.otf */; };
+		9038004C24D346FD009F9033 /* Gotham-BoldItalic 2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038002E24D346FD009F9033 /* Gotham-BoldItalic 2.otf */; };
+		9038004D24D346FD009F9033 /* Gotham-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038002F24D346FD009F9033 /* Gotham-Book.otf */; };
+		9038004E24D346FD009F9033 /* Gotham-UltraItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038003024D346FD009F9033 /* Gotham-UltraItalic.otf */; };
+		9038004F24D346FD009F9033 /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038003124D346FD009F9033 /* Gotham-Bold.otf */; };
+		9038005024D346FD009F9033 /* Gotham-Medium 3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038003224D346FD009F9033 /* Gotham-Medium 3.otf */; };
+		9038005124D346FD009F9033 /* Gotham-Medium 2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038003324D346FD009F9033 /* Gotham-Medium 2.otf */; };
+		9038005224D346FD009F9033 /* Gotham-MediumItalic 2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038003424D346FD009F9033 /* Gotham-MediumItalic 2.otf */; };
+		9038005324D346FD009F9033 /* Gotham-Ultra.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038003524D346FD009F9033 /* Gotham-Ultra.otf */; };
+		9038005424D346FD009F9033 /* Gotham-MediumItalic 3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038003624D346FD009F9033 /* Gotham-MediumItalic 3.otf */; };
+		9038005524D346FD009F9033 /* Gotham-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038003724D346FD009F9033 /* Gotham-LightItalic.otf */; };
+		9038005624D346FD009F9033 /* Gotham-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038003824D346FD009F9033 /* Gotham-ThinItalic.otf */; };
+		9038005724D346FD009F9033 /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038003924D346FD009F9033 /* Gotham-Light.otf */; };
+		9038005824D346FD009F9033 /* Gotham-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038003A24D346FD009F9033 /* Gotham-BoldItalic.otf */; };
+		9038005924D346FD009F9033 /* Gotham-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038003B24D346FD009F9033 /* Gotham-BookItalic.otf */; };
+		9038005A24D346FD009F9033 /* Gotham-BookItalic 3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038003C24D346FD009F9033 /* Gotham-BookItalic 3.otf */; };
+		9038005B24D346FD009F9033 /* Gotham-BookItalic 2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038003D24D346FD009F9033 /* Gotham-BookItalic 2.otf */; };
+		9038005C24D346FD009F9033 /* Gotham-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038003E24D346FD009F9033 /* Gotham-BlackItalic.otf */; };
+		9038005D24D346FD009F9033 /* Gotham-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9038003F24D346FD009F9033 /* Gotham-MediumItalic.otf */; };
+		9038005F24D34776009F9033 /* TextField+Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038005E24D34776009F9033 /* TextField+Validate.swift */; };
+		9038006224D347BD009F9033 /* String+Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038006124D347BD009F9033 /* String+Validator.swift */; };
+		9038006424D3484A009F9033 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038006324D3484A009F9033 /* Constants.swift */; };
+		9038006624D34910009F9033 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038006524D34910009F9033 /* ActionButton.swift */; };
+		9038006824D34953009F9033 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038006724D34953009F9033 /* UIButton+Style.swift */; };
+		9038FFF324D32869009F9033 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038FFF124D32869009F9033 /* OnboardingCoordinator.swift */; };
+		9038FFF424D32869009F9033 /* OnboardingCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038FFF224D32869009F9033 /* OnboardingCoordinatorOutput.swift */; };
+		9038FFF724D32881009F9033 /* OnboardingCoordinatorModuleFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038FFF624D32881009F9033 /* OnboardingCoordinatorModuleFactoryType.swift */; };
+		9038FFF924D32887009F9033 /* OnboardingCoordinatorModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038FFF824D32887009F9033 /* OnboardingCoordinatorModuleFactory.swift */; };
+		9038FFFE24D328D9009F9033 /* OnboardingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9038FFFB24D328D9009F9033 /* OnboardingViewController.storyboard */; };
+		9038FFFF24D328D9009F9033 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038FFFC24D328D9009F9033 /* OnboardingViewController.swift */; };
 		A53C3127CCEA284B3E1CA075 /* Pods_PixbayApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6ADC83D3DA140057863840B /* Pods_PixbayApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,7 +152,6 @@
 		900572A524D311D9002AE9BC /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		900572A624D311D9002AE9BC /* RxSwift + URLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxSwift + URLSession.swift"; sourceTree = "<group>"; };
 		900572AD24D312CF002AE9BC /* ErrorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorCode.swift; sourceTree = "<group>"; };
-		900572AF24D3133F002AE9BC /* CameraService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
 		900572B024D3133F002AE9BC /* NetfoxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetfoxService.swift; sourceTree = "<group>"; };
 		900572B124D3133F002AE9BC /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		900572B824D313CE002AE9BC /* UIViewController+KeyboardAvoidance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+KeyboardAvoidance.swift"; sourceTree = "<group>"; };
@@ -118,6 +170,60 @@
 		900572DF24D31EC6002AE9BC /* AppCoordinatorFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorFactoryType.swift; sourceTree = "<group>"; };
 		900572E124D31EDB002AE9BC /* AppCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorFactory.swift; sourceTree = "<group>"; };
 		900572E324D31F65002AE9BC /* AppEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		9038000324D329B0009F9033 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		9038000524D329D8009F9033 /* String+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		9038000924D32B81009F9033 /* StoryboardLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
+		9038000B24D32B8F009F9033 /* ValidationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationType.swift; sourceTree = "<group>"; };
+		9038000C24D32B8F009F9033 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		9038000F24D32C0A009F9033 /* UIViewController+Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Protocols.swift"; sourceTree = "<group>"; };
+		9038001224D333B2009F9033 /* UIColors+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+AppColors.swift"; sourceTree = "<group>"; };
+		9038001524D33810009F9033 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		9038001724D3386A009F9033 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		9038001924D338B4009F9033 /* UITextField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Style.swift"; sourceTree = "<group>"; };
+		9038001B24D33918009F9033 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
+		9038001E24D339A3009F9033 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		9038002224D346FD009F9033 /* Gotham-Light 2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Light 2.otf"; sourceTree = "<group>"; };
+		9038002324D346FD009F9033 /* Gotham-Light 3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Light 3.otf"; sourceTree = "<group>"; };
+		9038002424D346FD009F9033 /* Gotham-Book 3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Book 3.otf"; sourceTree = "<group>"; };
+		9038002524D346FD009F9033 /* Gotham-Book 2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Book 2.otf"; sourceTree = "<group>"; };
+		9038002624D346FD009F9033 /* Gotham-Bold 2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Bold 2.otf"; sourceTree = "<group>"; };
+		9038002724D346FD009F9033 /* Gotham-Bold 3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Bold 3.otf"; sourceTree = "<group>"; };
+		9038002824D346FD009F9033 /* Gotham-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Thin.otf"; sourceTree = "<group>"; };
+		9038002924D346FD009F9033 /* Gotham-LightItalic 2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-LightItalic 2.otf"; sourceTree = "<group>"; };
+		9038002A24D346FD009F9033 /* Gotham-LightItalic 3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-LightItalic 3.otf"; sourceTree = "<group>"; };
+		9038002B24D346FD009F9033 /* Gotham-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Black.otf"; sourceTree = "<group>"; };
+		9038002C24D346FD009F9033 /* Gotham-BoldItalic 3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-BoldItalic 3.otf"; sourceTree = "<group>"; };
+		9038002D24D346FD009F9033 /* Gotham-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Medium.otf"; sourceTree = "<group>"; };
+		9038002E24D346FD009F9033 /* Gotham-BoldItalic 2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-BoldItalic 2.otf"; sourceTree = "<group>"; };
+		9038002F24D346FD009F9033 /* Gotham-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Book.otf"; sourceTree = "<group>"; };
+		9038003024D346FD009F9033 /* Gotham-UltraItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-UltraItalic.otf"; sourceTree = "<group>"; };
+		9038003124D346FD009F9033 /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Bold.otf"; sourceTree = "<group>"; };
+		9038003224D346FD009F9033 /* Gotham-Medium 3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Medium 3.otf"; sourceTree = "<group>"; };
+		9038003324D346FD009F9033 /* Gotham-Medium 2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Medium 2.otf"; sourceTree = "<group>"; };
+		9038003424D346FD009F9033 /* Gotham-MediumItalic 2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-MediumItalic 2.otf"; sourceTree = "<group>"; };
+		9038003524D346FD009F9033 /* Gotham-Ultra.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Ultra.otf"; sourceTree = "<group>"; };
+		9038003624D346FD009F9033 /* Gotham-MediumItalic 3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-MediumItalic 3.otf"; sourceTree = "<group>"; };
+		9038003724D346FD009F9033 /* Gotham-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-LightItalic.otf"; sourceTree = "<group>"; };
+		9038003824D346FD009F9033 /* Gotham-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-ThinItalic.otf"; sourceTree = "<group>"; };
+		9038003924D346FD009F9033 /* Gotham-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Light.otf"; sourceTree = "<group>"; };
+		9038003A24D346FD009F9033 /* Gotham-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-BoldItalic.otf"; sourceTree = "<group>"; };
+		9038003B24D346FD009F9033 /* Gotham-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-BookItalic.otf"; sourceTree = "<group>"; };
+		9038003C24D346FD009F9033 /* Gotham-BookItalic 3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-BookItalic 3.otf"; sourceTree = "<group>"; };
+		9038003D24D346FD009F9033 /* Gotham-BookItalic 2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-BookItalic 2.otf"; sourceTree = "<group>"; };
+		9038003E24D346FD009F9033 /* Gotham-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-BlackItalic.otf"; sourceTree = "<group>"; };
+		9038003F24D346FD009F9033 /* Gotham-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-MediumItalic.otf"; sourceTree = "<group>"; };
+		9038005E24D34776009F9033 /* TextField+Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Validate.swift"; sourceTree = "<group>"; };
+		9038006124D347BD009F9033 /* String+Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validator.swift"; sourceTree = "<group>"; };
+		9038006324D3484A009F9033 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9038006524D34910009F9033 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		9038006724D34953009F9033 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
+		9038FFF124D32869009F9033 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		9038FFF224D32869009F9033 /* OnboardingCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinatorOutput.swift; sourceTree = "<group>"; };
+		9038FFF624D32881009F9033 /* OnboardingCoordinatorModuleFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinatorModuleFactoryType.swift; sourceTree = "<group>"; };
+		9038FFF824D32887009F9033 /* OnboardingCoordinatorModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinatorModuleFactory.swift; sourceTree = "<group>"; };
+		9038FFFB24D328D9009F9033 /* OnboardingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnboardingViewController.storyboard; sourceTree = "<group>"; };
+		9038FFFC24D328D9009F9033 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		9038FFFD24D328D9009F9033 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		C77250FD1D4777DE6CAD16B3 /* Pods_PixbayAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixbayAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6ADC83D3DA140057863840B /* Pods_PixbayApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixbayApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -165,6 +271,8 @@
 		9005725824D30DAD002AE9BC /* PixbayApp */ = {
 			isa = PBXGroup;
 			children = (
+				9038001424D337F6009F9033 /* Component */,
+				9038000824D32B77009F9033 /* Helpers */,
 				900572D824D31E51002AE9BC /* Flow */,
 				900572C624D318DB002AE9BC /* Application */,
 				900572BB24D31861002AE9BC /* Coordinator */,
@@ -173,6 +281,7 @@
 				900572AA24D3120C002AE9BC /* Networking */,
 				900572A324D311D9002AE9BC /* RxHelpers */,
 				9005727B24D31158002AE9BC /* NetworkLayer */,
+				9038000224D329A3009F9033 /* Resources */,
 				9005726224D30DAE002AE9BC /* Assets.xcassets */,
 				9005726424D30DAE002AE9BC /* LaunchScreen.storyboard */,
 				9005726724D30DAE002AE9BC /* Info.plist */,
@@ -237,7 +346,6 @@
 		900572AC24D3125B002AE9BC /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				900572AF24D3133F002AE9BC /* CameraService.swift */,
 				900572B024D3133F002AE9BC /* NetfoxService.swift */,
 				900572B124D3133F002AE9BC /* UserSettings.swift */,
 			);
@@ -247,8 +355,17 @@
 		900572B724D313C4002AE9BC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9038000524D329D8009F9033 /* String+Localization.swift */,
 				900572D624D31DD4002AE9BC /* UIGestureRecognizer+Extensions.swift */,
 				900572B824D313CE002AE9BC /* UIViewController+KeyboardAvoidance.swift */,
+				9038000F24D32C0A009F9033 /* UIViewController+Protocols.swift */,
+				9038001224D333B2009F9033 /* UIColors+AppColors.swift */,
+				9038001924D338B4009F9033 /* UITextField+Style.swift */,
+				9038001B24D33918009F9033 /* UILabel+Style.swift */,
+				9038001E24D339A3009F9033 /* UIView+Extensions.swift */,
+				9038005E24D34776009F9033 /* TextField+Validate.swift */,
+				9038006124D347BD009F9033 /* String+Validator.swift */,
+				9038006724D34953009F9033 /* UIButton+Style.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -271,6 +388,7 @@
 				900572C724D31904002AE9BC /* Dependencies */,
 				9005725924D30DAD002AE9BC /* AppDelegate.swift */,
 				900572E324D31F65002AE9BC /* AppEnvironment.swift */,
+				9038006324D3484A009F9033 /* Constants.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -303,6 +421,7 @@
 		900572D824D31E51002AE9BC /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				9038FFF024D3284E009F9033 /* OnboardingFlow */,
 				900572D924D31E5A002AE9BC /* AppFlow */,
 			);
 			path = Flow;
@@ -324,6 +443,118 @@
 				900572E124D31EDB002AE9BC /* AppCoordinatorFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		9038000124D328DC009F9033 /* OnboardingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9038FFFC24D328D9009F9033 /* OnboardingViewController.swift */,
+				9038FFFD24D328D9009F9033 /* OnboardingViewModel.swift */,
+				9038FFFB24D328D9009F9033 /* OnboardingViewController.storyboard */,
+			);
+			path = OnboardingViewController;
+			sourceTree = "<group>";
+		};
+		9038000224D329A3009F9033 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9038002024D346FD009F9033 /* Fonts */,
+				9038000324D329B0009F9033 /* Localizable.strings */,
+				9038001724D3386A009F9033 /* Fonts.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9038000824D32B77009F9033 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9038000924D32B81009F9033 /* StoryboardLoadable.swift */,
+				9038000B24D32B8F009F9033 /* ValidationType.swift */,
+				9038000C24D32B8F009F9033 /* Validator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9038001424D337F6009F9033 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				9038001524D33810009F9033 /* TextField.swift */,
+				9038006524D34910009F9033 /* ActionButton.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		9038002024D346FD009F9033 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9038002124D346FD009F9033 /* Gotham */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		9038002124D346FD009F9033 /* Gotham */ = {
+			isa = PBXGroup;
+			children = (
+				9038002224D346FD009F9033 /* Gotham-Light 2.otf */,
+				9038002324D346FD009F9033 /* Gotham-Light 3.otf */,
+				9038002424D346FD009F9033 /* Gotham-Book 3.otf */,
+				9038002524D346FD009F9033 /* Gotham-Book 2.otf */,
+				9038002624D346FD009F9033 /* Gotham-Bold 2.otf */,
+				9038002724D346FD009F9033 /* Gotham-Bold 3.otf */,
+				9038002824D346FD009F9033 /* Gotham-Thin.otf */,
+				9038002924D346FD009F9033 /* Gotham-LightItalic 2.otf */,
+				9038002A24D346FD009F9033 /* Gotham-LightItalic 3.otf */,
+				9038002B24D346FD009F9033 /* Gotham-Black.otf */,
+				9038002C24D346FD009F9033 /* Gotham-BoldItalic 3.otf */,
+				9038002D24D346FD009F9033 /* Gotham-Medium.otf */,
+				9038002E24D346FD009F9033 /* Gotham-BoldItalic 2.otf */,
+				9038002F24D346FD009F9033 /* Gotham-Book.otf */,
+				9038003024D346FD009F9033 /* Gotham-UltraItalic.otf */,
+				9038003124D346FD009F9033 /* Gotham-Bold.otf */,
+				9038003224D346FD009F9033 /* Gotham-Medium 3.otf */,
+				9038003324D346FD009F9033 /* Gotham-Medium 2.otf */,
+				9038003424D346FD009F9033 /* Gotham-MediumItalic 2.otf */,
+				9038003524D346FD009F9033 /* Gotham-Ultra.otf */,
+				9038003624D346FD009F9033 /* Gotham-MediumItalic 3.otf */,
+				9038003724D346FD009F9033 /* Gotham-LightItalic.otf */,
+				9038003824D346FD009F9033 /* Gotham-ThinItalic.otf */,
+				9038003924D346FD009F9033 /* Gotham-Light.otf */,
+				9038003A24D346FD009F9033 /* Gotham-BoldItalic.otf */,
+				9038003B24D346FD009F9033 /* Gotham-BookItalic.otf */,
+				9038003C24D346FD009F9033 /* Gotham-BookItalic 3.otf */,
+				9038003D24D346FD009F9033 /* Gotham-BookItalic 2.otf */,
+				9038003E24D346FD009F9033 /* Gotham-BlackItalic.otf */,
+				9038003F24D346FD009F9033 /* Gotham-MediumItalic.otf */,
+			);
+			path = Gotham;
+			sourceTree = "<group>";
+		};
+		9038FFF024D3284E009F9033 /* OnboardingFlow */ = {
+			isa = PBXGroup;
+			children = (
+				9038FFFA24D328B9009F9033 /* Modules */,
+				9038FFF524D3287A009F9033 /* Factory */,
+				9038FFF124D32869009F9033 /* OnboardingCoordinator.swift */,
+				9038FFF224D32869009F9033 /* OnboardingCoordinatorOutput.swift */,
+			);
+			path = OnboardingFlow;
+			sourceTree = "<group>";
+		};
+		9038FFF524D3287A009F9033 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				9038FFF624D32881009F9033 /* OnboardingCoordinatorModuleFactoryType.swift */,
+				9038FFF824D32887009F9033 /* OnboardingCoordinatorModuleFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		9038FFFA24D328B9009F9033 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9038000124D328DC009F9033 /* OnboardingViewController */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		9589B64935C6114BEEA532A6 /* Pods */ = {
@@ -431,8 +662,40 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9038005924D346FD009F9033 /* Gotham-BookItalic.otf in Resources */,
+				9038005524D346FD009F9033 /* Gotham-LightItalic.otf in Resources */,
+				9038004F24D346FD009F9033 /* Gotham-Bold.otf in Resources */,
+				9038004224D346FD009F9033 /* Gotham-Book 3.otf in Resources */,
+				9038004C24D346FD009F9033 /* Gotham-BoldItalic 2.otf in Resources */,
+				9038004924D346FD009F9033 /* Gotham-Black.otf in Resources */,
+				9038005A24D346FD009F9033 /* Gotham-BookItalic 3.otf in Resources */,
+				9038004524D346FD009F9033 /* Gotham-Bold 3.otf in Resources */,
+				9038FFFE24D328D9009F9033 /* OnboardingViewController.storyboard in Resources */,
+				9038005124D346FD009F9033 /* Gotham-Medium 2.otf in Resources */,
+				9038004E24D346FD009F9033 /* Gotham-UltraItalic.otf in Resources */,
+				9038004324D346FD009F9033 /* Gotham-Book 2.otf in Resources */,
+				9038005D24D346FD009F9033 /* Gotham-MediumItalic.otf in Resources */,
+				9038004D24D346FD009F9033 /* Gotham-Book.otf in Resources */,
+				9038004124D346FD009F9033 /* Gotham-Light 3.otf in Resources */,
+				9038005B24D346FD009F9033 /* Gotham-BookItalic 2.otf in Resources */,
+				9038004B24D346FD009F9033 /* Gotham-Medium.otf in Resources */,
+				9038005624D346FD009F9033 /* Gotham-ThinItalic.otf in Resources */,
+				9038005024D346FD009F9033 /* Gotham-Medium 3.otf in Resources */,
+				9038004824D346FD009F9033 /* Gotham-LightItalic 3.otf in Resources */,
+				9038005424D346FD009F9033 /* Gotham-MediumItalic 3.otf in Resources */,
+				9038005224D346FD009F9033 /* Gotham-MediumItalic 2.otf in Resources */,
+				9038004024D346FD009F9033 /* Gotham-Light 2.otf in Resources */,
+				9038004A24D346FD009F9033 /* Gotham-BoldItalic 3.otf in Resources */,
+				9038004624D346FD009F9033 /* Gotham-Thin.otf in Resources */,
+				9038000424D329B0009F9033 /* Localizable.strings in Resources */,
+				9038005824D346FD009F9033 /* Gotham-BoldItalic.otf in Resources */,
+				9038004724D346FD009F9033 /* Gotham-LightItalic 2.otf in Resources */,
+				9038005324D346FD009F9033 /* Gotham-Ultra.otf in Resources */,
+				9038005C24D346FD009F9033 /* Gotham-BlackItalic.otf in Resources */,
+				9038005724D346FD009F9033 /* Gotham-Light.otf in Resources */,
 				9005726624D30DAE002AE9BC /* LaunchScreen.storyboard in Resources */,
 				9005726324D30DAE002AE9BC /* Assets.xcassets in Resources */,
+				9038004424D346FD009F9033 /* Gotham-Bold 2.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,37 +795,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9038000D24D32B8F009F9033 /* ValidationType.swift in Sources */,
 				9005729824D31158002AE9BC /* Request.swift in Sources */,
 				900572A124D31158002AE9BC /* NetworkDispatcher.swift in Sources */,
 				900572B424D3133F002AE9BC /* NetfoxService.swift in Sources */,
 				9005725A24D30DAD002AE9BC /* AppDelegate.swift in Sources */,
-				900572B324D3133F002AE9BC /* CameraService.swift in Sources */,
 				900572C324D31861002AE9BC /* Router.swift in Sources */,
 				900572B924D313CE002AE9BC /* UIViewController+KeyboardAvoidance.swift in Sources */,
+				9038005F24D34776009F9033 /* TextField+Validate.swift in Sources */,
 				900572C524D31861002AE9BC /* Coordinator.swift in Sources */,
+				9038001C24D33918009F9033 /* UILabel+Style.swift in Sources */,
 				900572A924D311D9002AE9BC /* RxSwift + URLSession.swift in Sources */,
 				900572C924D3191A002AE9BC /* DependencyProvider.swift in Sources */,
+				9038FFF724D32881009F9033 /* OnboardingCoordinatorModuleFactoryType.swift in Sources */,
+				9038001F24D339A3009F9033 /* UIView+Extensions.swift in Sources */,
+				9038FFF424D32869009F9033 /* OnboardingCoordinatorOutput.swift in Sources */,
 				900572CF24D319AA002AE9BC /* HasPixbayAppApi.swift in Sources */,
+				9038000024D328D9009F9033 /* OnboardingViewModel.swift in Sources */,
 				9005729224D31158002AE9BC /* NetworkLoggerType.swift in Sources */,
+				9038000624D329D8009F9033 /* String+Localization.swift in Sources */,
 				9005729024D31158002AE9BC /* Dispatcher.swift in Sources */,
+				9038001324D333B2009F9033 /* UIColors+AppColors.swift in Sources */,
+				9038000A24D32B81009F9033 /* StoryboardLoadable.swift in Sources */,
+				9038001624D33810009F9033 /* TextField.swift in Sources */,
+				9038001024D32C0A009F9033 /* UIViewController+Protocols.swift in Sources */,
 				9005729924D31158002AE9BC /* RootApiResponse.swift in Sources */,
 				900572D724D31DD4002AE9BC /* UIGestureRecognizer+Extensions.swift in Sources */,
 				900572E224D31EDB002AE9BC /* AppCoordinatorFactory.swift in Sources */,
+				9038006824D34953009F9033 /* UIButton+Style.swift in Sources */,
 				9005729F24D31158002AE9BC /* Operation.swift in Sources */,
+				9038000E24D32B8F009F9033 /* Validator.swift in Sources */,
 				900572E024D31EC6002AE9BC /* AppCoordinatorFactoryType.swift in Sources */,
 				9005729B24D31158002AE9BC /* EmptyDataModel.swift in Sources */,
 				900572DC24D31E6F002AE9BC /* AppCoordinator.swift in Sources */,
 				900572CD24D31979002AE9BC /* PixbayAppApi.swift in Sources */,
 				9005729424D31158002AE9BC /* HttpMethod.swift in Sources */,
 				9005729524D31158002AE9BC /* MimeType.swift in Sources */,
+				9038006424D3484A009F9033 /* Constants.swift in Sources */,
 				9005729724D31158002AE9BC /* Response.swift in Sources */,
+				9038006224D347BD009F9033 /* String+Validator.swift in Sources */,
 				9005729324D31158002AE9BC /* NetworkErrorType.swift in Sources */,
+				9038FFFF24D328D9009F9033 /* OnboardingViewController.swift in Sources */,
 				900572D224D31A1E002AE9BC /* BaseEnvironment.swift in Sources */,
 				900572A824D311D9002AE9BC /* Reachability.swift in Sources */,
+				9038FFF924D32887009F9033 /* OnboardingCoordinatorModuleFactory.swift in Sources */,
 				9005728F24D31158002AE9BC /* ResponseHandler.swift in Sources */,
+				9038001A24D338B4009F9033 /* UITextField+Style.swift in Sources */,
 				9005729124D31158002AE9BC /* Environment.swift in Sources */,
 				9005729E24D31158002AE9BC /* NetworkError.swift in Sources */,
 				900572C224D31861002AE9BC /* RouterType.swift in Sources */,
+				9038FFF324D32869009F9033 /* OnboardingCoordinator.swift in Sources */,
 				900572C124D31861002AE9BC /* Presentable.swift in Sources */,
 				900572AE24D312CF002AE9BC /* ErrorCode.swift in Sources */,
 				900572A024D31158002AE9BC /* HTTPHeaderName.swift in Sources */,
@@ -570,6 +852,8 @@
 				9005729D24D31158002AE9BC /* NetworkLogger.swift in Sources */,
 				900572B524D3133F002AE9BC /* UserSettings.swift in Sources */,
 				900572D524D31A80002AE9BC /* ProductionEnvironment.swift in Sources */,
+				9038006624D34910009F9033 /* ActionButton.swift in Sources */,
+				9038001824D3386A009F9033 /* Fonts.swift in Sources */,
 				900572A724D311D9002AE9BC /* ReachabilityService.swift in Sources */,
 				900572C424D31861002AE9BC /* BaseCoordinator.swift in Sources */,
 				9005729C24D31158002AE9BC /* RequestParameters.swift in Sources */,
@@ -735,7 +1019,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = app.tarek.demo.PixbayApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -754,7 +1038,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = app.tarek.demo.PixbayApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  PixbayApp
+
+  Created by Tarek Abdallah on 7/30/20.
+  Copyright © 2020 Personal. All rights reserved.
+*/
+
+// MARK: - Onboarding Scene
+"onboarding_scene.button.login_text" = "Login";
+"onboarding_scene.placeholder.email_text" = "Email";
+"onboarding_scene.placeholder.password_text" = "Password";
+"onboarding_scene.button.register_text" = "Register?";

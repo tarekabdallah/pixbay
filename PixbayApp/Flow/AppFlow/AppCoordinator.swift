@@ -21,7 +21,7 @@ class AppCoordinator: BaseCoordinator {
     }
 
     override func start() {
-        // TODO
+        runOnboardingFlow()
     }
 
     override func toPresent() -> UIViewController {
@@ -32,6 +32,16 @@ class AppCoordinator: BaseCoordinator {
 
 extension AppCoordinator {
     func runOnboardingFlow() {
+        var onboardingCoordinator = coordinatorFactory
+            .makeOnboardingCoordinator(router: router,
+                                       dependencies: dependencyProvider,
+                                       moduleFactory: OnboardingCoordinatorModuleFactory())
+        onboardingCoordinator.finishFlow = { [weak self, weak onboardingCoordinator] in
+            self?.runMainFlow()
+            self?.removeChild(coordinator: onboardingCoordinator)
+        }
+        addChild(coordinator: onboardingCoordinator)
+        onboardingCoordinator.start()
     }
 
     func runMainFlow() {

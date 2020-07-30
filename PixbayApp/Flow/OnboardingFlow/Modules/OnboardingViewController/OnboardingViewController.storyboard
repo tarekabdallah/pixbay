@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="4SA-zD-bwI">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingViewController" id="2wO-cr-JXA" customClass="OnboardingViewController" customModule="PixbayApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XpQ-A0-OKp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="EFv-1E-M9m">
+                                <rect key="frame" x="107" y="68" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EFv-1E-M9m" secondAttribute="height" multiplier="1:1" id="QFm-1M-RyT"/>
+                                    <constraint firstAttribute="height" constant="200" id="bga-pb-CS1"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BgK-4i-SX8" customClass="TextField" customModule="PixbayApp" customModuleProvider="target">
+                                <rect key="frame" x="32" y="348" width="350" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Jbm-4S-Ryb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="num-Oq-zhc" customClass="TextField" customModule="PixbayApp" customModuleProvider="target">
+                                <rect key="frame" x="32" y="418" width="350" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xXH-d1-eYB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rY-gQ-TqM">
+                                <rect key="frame" x="336" y="476" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SoS-nT-tmU" customClass="ActionButton" customModule="PixbayApp" customModuleProvider="target">
+                                <rect key="frame" x="32" y="780" width="350" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="iZn-AY-WIW"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="2rY-gQ-TqM" firstAttribute="top" secondItem="num-Oq-zhc" secondAttribute="bottom" constant="8" id="3wE-wA-dID"/>
+                            <constraint firstItem="SoS-nT-tmU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2rY-gQ-TqM" secondAttribute="bottom" constant="16" id="7h6-jh-lO9"/>
+                            <constraint firstItem="EFv-1E-M9m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eYg-3R-pgp" secondAttribute="leading" constant="32" id="9A6-lE-Ngm"/>
+                            <constraint firstItem="2rY-gQ-TqM" firstAttribute="trailing" secondItem="num-Oq-zhc" secondAttribute="trailing" id="AgV-Hy-pKq"/>
+                            <constraint firstItem="BgK-4i-SX8" firstAttribute="top" secondItem="EFv-1E-M9m" secondAttribute="bottom" priority="700" constant="80" id="Ayo-os-s43"/>
+                            <constraint firstItem="BgK-4i-SX8" firstAttribute="leading" secondItem="eYg-3R-pgp" secondAttribute="leading" constant="32" id="GWq-GW-yPH"/>
+                            <constraint firstItem="eYg-3R-pgp" firstAttribute="bottom" secondItem="SoS-nT-tmU" secondAttribute="bottom" constant="32" placeholder="YES" id="XRK-bP-RyU"/>
+                            <constraint firstItem="EFv-1E-M9m" firstAttribute="centerX" secondItem="eYg-3R-pgp" secondAttribute="centerX" id="YNc-ck-hr1"/>
+                            <constraint firstItem="BgK-4i-SX8" firstAttribute="centerX" secondItem="eYg-3R-pgp" secondAttribute="centerX" id="al1-RY-G1L"/>
+                            <constraint firstItem="SoS-nT-tmU" firstAttribute="leading" secondItem="num-Oq-zhc" secondAttribute="leading" id="bmh-aY-1eL"/>
+                            <constraint firstItem="EFv-1E-M9m" firstAttribute="top" secondItem="eYg-3R-pgp" secondAttribute="top" priority="500" constant="24" id="cZZ-oQ-2f0"/>
+                            <constraint firstItem="num-Oq-zhc" firstAttribute="leading" secondItem="BgK-4i-SX8" secondAttribute="leading" id="gH8-m2-9hw"/>
+                            <constraint firstItem="num-Oq-zhc" firstAttribute="trailing" secondItem="BgK-4i-SX8" secondAttribute="trailing" id="h4J-qj-BuX"/>
+                            <constraint firstItem="SoS-nT-tmU" firstAttribute="trailing" secondItem="num-Oq-zhc" secondAttribute="trailing" id="mJ4-S6-BVH"/>
+                            <constraint firstItem="eYg-3R-pgp" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="SoS-nT-tmU" secondAttribute="bottom" constant="32" id="mVa-0s-jB4"/>
+                            <constraint firstItem="num-Oq-zhc" firstAttribute="top" secondItem="BgK-4i-SX8" secondAttribute="bottom" constant="20" id="oLm-gf-f8R"/>
+                            <constraint firstItem="BgK-4i-SX8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="EFv-1E-M9m" secondAttribute="bottom" constant="32" id="oZS-Na-imN"/>
+                            <constraint firstItem="EFv-1E-M9m" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eYg-3R-pgp" secondAttribute="top" constant="8" id="tvz-W4-22S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eYg-3R-pgp"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="BgK-4i-SX8" id="43p-jU-Gdq"/>
+                        <outlet property="loginButton" destination="SoS-nT-tmU" id="cfd-u6-s2O"/>
+                        <outlet property="passwordTextField" destination="num-Oq-zhc" id="pWv-O4-bqg"/>
+                        <outlet property="registerButton" destination="2rY-gQ-TqM" id="1IN-wu-NSf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Eh-L1-vKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="341.5" height="341.5"/>
+        <namedColor name="primary">
+            <color red="0.28200000524520874" green="0.66299998760223389" blue="0.27799999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

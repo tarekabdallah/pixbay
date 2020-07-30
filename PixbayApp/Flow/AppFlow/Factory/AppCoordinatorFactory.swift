@@ -9,5 +9,13 @@
 import Foundation
 
 struct AppCoordinatorFactory: AppCoordinatorFactoryType {
-
+    func makeOnboardingCoordinator(router: RouterType,
+                                   dependencies: OnboardingCoordinator.Dependencies,
+                                   moduleFactory: OnboardingCoordinatorModuleFactoryType)
+        -> Coordinator & OnboardingCoordinatorOutput {
+            let onboardingCoordinator = OnboardingCoordinator(router: router,
+                                                              dependencies: dependencies,
+                                                              moduleFactory: moduleFactory)
+            return onboardingCoordinator
+    }
 }
