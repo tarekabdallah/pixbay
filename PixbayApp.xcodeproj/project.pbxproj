@@ -36,6 +36,16 @@
 		900572A724D311D9002AE9BC /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572A424D311D9002AE9BC /* ReachabilityService.swift */; };
 		900572A824D311D9002AE9BC /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572A524D311D9002AE9BC /* Reachability.swift */; };
 		900572A924D311D9002AE9BC /* RxSwift + URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572A624D311D9002AE9BC /* RxSwift + URLSession.swift */; };
+		900572AE24D312CF002AE9BC /* ErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572AD24D312CF002AE9BC /* ErrorCode.swift */; };
+		900572B324D3133F002AE9BC /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572AF24D3133F002AE9BC /* CameraService.swift */; };
+		900572B424D3133F002AE9BC /* NetfoxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572B024D3133F002AE9BC /* NetfoxService.swift */; };
+		900572B524D3133F002AE9BC /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572B124D3133F002AE9BC /* UserSettings.swift */; };
+		900572B924D313CE002AE9BC /* UIViewController+KeyboardAvoidance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572B824D313CE002AE9BC /* UIViewController+KeyboardAvoidance.swift */; };
+		900572C124D31861002AE9BC /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572BC24D31861002AE9BC /* Presentable.swift */; };
+		900572C224D31861002AE9BC /* RouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572BD24D31861002AE9BC /* RouterType.swift */; };
+		900572C324D31861002AE9BC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572BE24D31861002AE9BC /* Router.swift */; };
+		900572C424D31861002AE9BC /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572BF24D31861002AE9BC /* BaseCoordinator.swift */; };
+		900572C524D31861002AE9BC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572C024D31861002AE9BC /* Coordinator.swift */; };
 		A53C3127CCEA284B3E1CA075 /* Pods_PixbayApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6ADC83D3DA140057863840B /* Pods_PixbayApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +96,16 @@
 		900572A424D311D9002AE9BC /* ReachabilityService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
 		900572A524D311D9002AE9BC /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		900572A624D311D9002AE9BC /* RxSwift + URLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxSwift + URLSession.swift"; sourceTree = "<group>"; };
+		900572AD24D312CF002AE9BC /* ErrorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorCode.swift; sourceTree = "<group>"; };
+		900572AF24D3133F002AE9BC /* CameraService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		900572B024D3133F002AE9BC /* NetfoxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetfoxService.swift; sourceTree = "<group>"; };
+		900572B124D3133F002AE9BC /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		900572B824D313CE002AE9BC /* UIViewController+KeyboardAvoidance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+KeyboardAvoidance.swift"; sourceTree = "<group>"; };
+		900572BC24D31861002AE9BC /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		900572BD24D31861002AE9BC /* RouterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterType.swift; sourceTree = "<group>"; };
+		900572BE24D31861002AE9BC /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		900572BF24D31861002AE9BC /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		900572C024D31861002AE9BC /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C77250FD1D4777DE6CAD16B3 /* Pods_PixbayAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixbayAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6ADC83D3DA140057863840B /* Pods_PixbayApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixbayApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -133,6 +153,8 @@
 		9005725824D30DAD002AE9BC /* PixbayApp */ = {
 			isa = PBXGroup;
 			children = (
+				900572BB24D31861002AE9BC /* Coordinator */,
+				900572B724D313C4002AE9BC /* Extensions */,
 				900572AC24D3125B002AE9BC /* Services */,
 				900572AA24D3120C002AE9BC /* Networking */,
 				900572A324D311D9002AE9BC /* RxHelpers */,
@@ -170,6 +192,7 @@
 				9005728424D31158002AE9BC /* Response.swift */,
 				9005728524D31158002AE9BC /* Request.swift */,
 				9005728624D31158002AE9BC /* RootApiResponse.swift */,
+				900572AD24D312CF002AE9BC /* ErrorCode.swift */,
 				9005728724D31158002AE9BC /* MultipartData.swift */,
 				9005728824D31158002AE9BC /* EmptyDataModel.swift */,
 				9005728924D31158002AE9BC /* RequestParameters.swift */,
@@ -202,8 +225,31 @@
 		900572AC24D3125B002AE9BC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				900572AF24D3133F002AE9BC /* CameraService.swift */,
+				900572B024D3133F002AE9BC /* NetfoxService.swift */,
+				900572B124D3133F002AE9BC /* UserSettings.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		900572B724D313C4002AE9BC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				900572B824D313CE002AE9BC /* UIViewController+KeyboardAvoidance.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		900572BB24D31861002AE9BC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				900572BC24D31861002AE9BC /* Presentable.swift */,
+				900572BD24D31861002AE9BC /* RouterType.swift */,
+				900572BE24D31861002AE9BC /* Router.swift */,
+				900572BF24D31861002AE9BC /* BaseCoordinator.swift */,
+				900572C024D31861002AE9BC /* Coordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		9589B64935C6114BEEA532A6 /* Pods */ = {
@@ -417,8 +463,13 @@
 				9005729824D31158002AE9BC /* Request.swift in Sources */,
 				9005725E24D30DAD002AE9BC /* ViewController.swift in Sources */,
 				900572A124D31158002AE9BC /* NetworkDispatcher.swift in Sources */,
+				900572B424D3133F002AE9BC /* NetfoxService.swift in Sources */,
 				9005725A24D30DAD002AE9BC /* AppDelegate.swift in Sources */,
 				9005729A24D31158002AE9BC /* MultipartData.swift in Sources */,
+				900572B324D3133F002AE9BC /* CameraService.swift in Sources */,
+				900572C324D31861002AE9BC /* Router.swift in Sources */,
+				900572B924D313CE002AE9BC /* UIViewController+KeyboardAvoidance.swift in Sources */,
+				900572C524D31861002AE9BC /* Coordinator.swift in Sources */,
 				900572A924D311D9002AE9BC /* RxSwift + URLSession.swift in Sources */,
 				9005729224D31158002AE9BC /* NetworkLoggerType.swift in Sources */,
 				9005729024D31158002AE9BC /* Dispatcher.swift in Sources */,
@@ -433,9 +484,14 @@
 				9005728F24D31158002AE9BC /* ResponseHandler.swift in Sources */,
 				9005729124D31158002AE9BC /* Environment.swift in Sources */,
 				9005729E24D31158002AE9BC /* NetworkError.swift in Sources */,
+				900572C224D31861002AE9BC /* RouterType.swift in Sources */,
+				900572C124D31861002AE9BC /* Presentable.swift in Sources */,
+				900572AE24D312CF002AE9BC /* ErrorCode.swift in Sources */,
 				900572A024D31158002AE9BC /* HTTPHeaderName.swift in Sources */,
 				9005729D24D31158002AE9BC /* NetworkLogger.swift in Sources */,
+				900572B524D3133F002AE9BC /* UserSettings.swift in Sources */,
 				900572A724D311D9002AE9BC /* ReachabilityService.swift in Sources */,
+				900572C424D31861002AE9BC /* BaseCoordinator.swift in Sources */,
 				9005729C24D31158002AE9BC /* RequestParameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
