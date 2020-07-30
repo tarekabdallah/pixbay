@@ -12,5 +12,4 @@ enum RequestParameters {
     case body([String: Any]?)
     case query([String: Any]?)
     case array([Any]?)
-    case multipart(MultipartData)
 }

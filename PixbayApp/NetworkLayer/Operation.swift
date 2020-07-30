@@ -12,35 +12,34 @@ import RxSwift
 protocol Operation: ResponseHandler {
     associatedtype Output: Decodable
 
-    func execute(in dispatcher: Dispatcher) -> Observable<Output>
+    func execute(in dispatcher: Dispatcher) -> Single<Output>
 }
 
 extension Operation where Self: Request {
-    func execute(in dispatcher: Dispatcher) -> Observable<Output> {
-        return Observable<Output>.create { observer in
+    func execute(in dispatcher: Dispatcher) -> Single<Output> {
+        return Single<Output>.create { single in
             do {
-                try dispatcher.execute(request: self).subscribe(onNext: { response in
+                try dispatcher.execute(request: self).subscribe(onSuccess: { response in
                     do {
                         guard let outputObject = try self.handle(response: response) else {
                             return
                         }
                         DispatchQueue.main.async {
-                            observer.onNext(outputObject)
-                            observer.on(.completed)
+                            single(.success(outputObject))
                         }
                     } catch {
                         DispatchQueue.main.async {
-                            observer.onError(error)
+                            single(.error(error))
                         }
                     }
                 }, onError: { error in
                     DispatchQueue.main.async {
-                        observer.onError(error)
+                        single(.error(error))
                     }
                 }).disposed(by: self.disposeBag)
             } catch {
                 DispatchQueue.main.async {
-                    observer.onError(error)
+                    single(.error(error))
                 }
             }
             return Disposables.create()

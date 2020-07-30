@@ -4,11 +4,6 @@ platform :ios, '13.5'
 use_frameworks!
 inhibit_all_warnings!
 
-def firebase_pods
-  pod 'Firebase', '~> 6.24.0'
-  pod 'Firebase/Auth', '~> 6.24.0'
-end
-
 def shared_pods
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
@@ -18,8 +13,6 @@ def shared_pods
   pod 'NVActivityIndicatorView', '~> 4.8.0'
   pod 'netfox'
   pod 'SwiftLint', '~> 0.39.2'
-
-  firebase_pods
 end
 
 target 'PixbayApp' do

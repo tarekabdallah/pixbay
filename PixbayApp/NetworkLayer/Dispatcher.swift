@@ -13,5 +13,5 @@ import RxSwift
 protocol Dispatcher {
     init(environment: Environment, logger: NetworkLoggerType)
 
-    func execute(request: Request) throws -> Observable<Response>
+    func execute(request: Request) throws -> Single<Response>
 }

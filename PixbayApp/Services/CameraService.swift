@@ -38,11 +38,11 @@ private extension CameraService {
     func getAuthorizationStatusStrings() -> [String] {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
         case .authorized:
-            return ["camera_service.permission.authorized".localized]
+            return ["Authorized"]
         case .restricted:
-            return ["camera_service.permission.restricted".localized]
+            return ["Restricted"]
         default:
-            return ["misc.label.disabled".localized]
+            return ["Disabled"]
         }
     }
 }

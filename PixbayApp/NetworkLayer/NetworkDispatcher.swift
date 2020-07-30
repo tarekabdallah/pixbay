@@ -17,7 +17,7 @@ class NetworkDispatcher: Dispatcher {
         self.logger = logger
     }
 
-    func execute(request: Request) throws -> Observable<Response> {
+    func execute(request: Request) throws -> Single<Response> {
         let urlRequest = try prepareUrlRequest(for: request)
         logger.log(request: urlRequest)
             return URLSession
@@ -45,7 +45,6 @@ class NetworkDispatcher: Dispatcher {
         }
 
         urlRequest.httpMethod = request.method.rawValue
-        urlRequest.setValue(SessionType.default.rawValue, forHTTPHeaderField: HTTPHeaderName.sessionType.rawValue)
 
         switch request.parameters {
         case let .body(parameters):
@@ -68,11 +67,6 @@ class NetworkDispatcher: Dispatcher {
                 urlRequest.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
                 urlRequest.addValue("application/json", forHTTPHeaderField: HTTPHeaderName.contentType.rawValue)
             }
-        case let .multipart(multipartData):
-            urlRequest.httpBody = multipartData.data
-            urlRequest.addValue("multipart/form-data; boundary=\(multipartData.boundary)",
-                forHTTPHeaderField: HTTPHeaderName.contentType.rawValue)
-            urlRequest.setValue(SessionType.upload.rawValue, forHTTPHeaderField: HTTPHeaderName.sessionType.rawValue)
         }
 
         return urlRequest

@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		281C9FB979300A203AF3AF9A /* Pods_PixbayAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77250FD1D4777DE6CAD16B3 /* Pods_PixbayAppTests.framework */; };
 		9005725A24D30DAD002AE9BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005725924D30DAD002AE9BC /* AppDelegate.swift */; };
-		9005725E24D30DAD002AE9BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005725D24D30DAD002AE9BC /* ViewController.swift */; };
-		9005726124D30DAD002AE9BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9005725F24D30DAD002AE9BC /* Main.storyboard */; };
 		9005726324D30DAE002AE9BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9005726224D30DAE002AE9BC /* Assets.xcassets */; };
 		9005726624D30DAE002AE9BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9005726424D30DAE002AE9BC /* LaunchScreen.storyboard */; };
 		9005727124D30DAE002AE9BC /* PixbayAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005727024D30DAE002AE9BC /* PixbayAppTests.swift */; };
@@ -21,11 +19,9 @@
 		9005729324D31158002AE9BC /* NetworkErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005728024D31158002AE9BC /* NetworkErrorType.swift */; };
 		9005729424D31158002AE9BC /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005728124D31158002AE9BC /* HttpMethod.swift */; };
 		9005729524D31158002AE9BC /* MimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005728224D31158002AE9BC /* MimeType.swift */; };
-		9005729624D31158002AE9BC /* SessionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005728324D31158002AE9BC /* SessionType.swift */; };
 		9005729724D31158002AE9BC /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005728424D31158002AE9BC /* Response.swift */; };
 		9005729824D31158002AE9BC /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005728524D31158002AE9BC /* Request.swift */; };
 		9005729924D31158002AE9BC /* RootApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005728624D31158002AE9BC /* RootApiResponse.swift */; };
-		9005729A24D31158002AE9BC /* MultipartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005728724D31158002AE9BC /* MultipartData.swift */; };
 		9005729B24D31158002AE9BC /* EmptyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005728824D31158002AE9BC /* EmptyDataModel.swift */; };
 		9005729C24D31158002AE9BC /* RequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005728924D31158002AE9BC /* RequestParameters.swift */; };
 		9005729D24D31158002AE9BC /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005728A24D31158002AE9BC /* NetworkLogger.swift */; };
@@ -46,6 +42,16 @@
 		900572C324D31861002AE9BC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572BE24D31861002AE9BC /* Router.swift */; };
 		900572C424D31861002AE9BC /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572BF24D31861002AE9BC /* BaseCoordinator.swift */; };
 		900572C524D31861002AE9BC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572C024D31861002AE9BC /* Coordinator.swift */; };
+		900572C924D3191A002AE9BC /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572C824D3191A002AE9BC /* DependencyProvider.swift */; };
+		900572CD24D31979002AE9BC /* PixbayAppApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572CC24D31979002AE9BC /* PixbayAppApi.swift */; };
+		900572CF24D319AA002AE9BC /* HasPixbayAppApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572CE24D319AA002AE9BC /* HasPixbayAppApi.swift */; };
+		900572D224D31A1E002AE9BC /* BaseEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572D124D31A1E002AE9BC /* BaseEnvironment.swift */; };
+		900572D524D31A80002AE9BC /* ProductionEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572D424D31A80002AE9BC /* ProductionEnvironment.swift */; };
+		900572D724D31DD4002AE9BC /* UIGestureRecognizer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572D624D31DD4002AE9BC /* UIGestureRecognizer+Extensions.swift */; };
+		900572DC24D31E6F002AE9BC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572DA24D31E6F002AE9BC /* AppCoordinator.swift */; };
+		900572E024D31EC6002AE9BC /* AppCoordinatorFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572DF24D31EC6002AE9BC /* AppCoordinatorFactoryType.swift */; };
+		900572E224D31EDB002AE9BC /* AppCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572E124D31EDB002AE9BC /* AppCoordinatorFactory.swift */; };
+		900572E424D31F65002AE9BC /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572E324D31F65002AE9BC /* AppEnvironment.swift */; };
 		A53C3127CCEA284B3E1CA075 /* Pods_PixbayApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6ADC83D3DA140057863840B /* Pods_PixbayApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,8 +72,6 @@
 		60D75CA18D10F176CF9DB21B /* Pods-PixbayApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixbayApp.release.xcconfig"; path = "Target Support Files/Pods-PixbayApp/Pods-PixbayApp.release.xcconfig"; sourceTree = "<group>"; };
 		9005725624D30DAD002AE9BC /* PixbayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixbayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9005725924D30DAD002AE9BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9005725D24D30DAD002AE9BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9005726024D30DAD002AE9BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9005726224D30DAE002AE9BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9005726524D30DAE002AE9BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9005726724D30DAE002AE9BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,11 +85,9 @@
 		9005728024D31158002AE9BC /* NetworkErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkErrorType.swift; sourceTree = "<group>"; };
 		9005728124D31158002AE9BC /* HttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		9005728224D31158002AE9BC /* MimeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MimeType.swift; sourceTree = "<group>"; };
-		9005728324D31158002AE9BC /* SessionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionType.swift; sourceTree = "<group>"; };
 		9005728424D31158002AE9BC /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		9005728524D31158002AE9BC /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		9005728624D31158002AE9BC /* RootApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootApiResponse.swift; sourceTree = "<group>"; };
-		9005728724D31158002AE9BC /* MultipartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartData.swift; sourceTree = "<group>"; };
 		9005728824D31158002AE9BC /* EmptyDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDataModel.swift; sourceTree = "<group>"; };
 		9005728924D31158002AE9BC /* RequestParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestParameters.swift; sourceTree = "<group>"; };
 		9005728A24D31158002AE9BC /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
@@ -106,6 +108,16 @@
 		900572BE24D31861002AE9BC /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		900572BF24D31861002AE9BC /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		900572C024D31861002AE9BC /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		900572C824D3191A002AE9BC /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
+		900572CC24D31979002AE9BC /* PixbayAppApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixbayAppApi.swift; sourceTree = "<group>"; };
+		900572CE24D319AA002AE9BC /* HasPixbayAppApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasPixbayAppApi.swift; sourceTree = "<group>"; };
+		900572D124D31A1E002AE9BC /* BaseEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEnvironment.swift; sourceTree = "<group>"; };
+		900572D424D31A80002AE9BC /* ProductionEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionEnvironment.swift; sourceTree = "<group>"; };
+		900572D624D31DD4002AE9BC /* UIGestureRecognizer+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizer+Extensions.swift"; sourceTree = "<group>"; };
+		900572DA24D31E6F002AE9BC /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		900572DF24D31EC6002AE9BC /* AppCoordinatorFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorFactoryType.swift; sourceTree = "<group>"; };
+		900572E124D31EDB002AE9BC /* AppCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorFactory.swift; sourceTree = "<group>"; };
+		900572E324D31F65002AE9BC /* AppEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		C77250FD1D4777DE6CAD16B3 /* Pods_PixbayAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixbayAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6ADC83D3DA140057863840B /* Pods_PixbayApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixbayApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -153,15 +165,14 @@
 		9005725824D30DAD002AE9BC /* PixbayApp */ = {
 			isa = PBXGroup;
 			children = (
+				900572D824D31E51002AE9BC /* Flow */,
+				900572C624D318DB002AE9BC /* Application */,
 				900572BB24D31861002AE9BC /* Coordinator */,
 				900572B724D313C4002AE9BC /* Extensions */,
 				900572AC24D3125B002AE9BC /* Services */,
 				900572AA24D3120C002AE9BC /* Networking */,
 				900572A324D311D9002AE9BC /* RxHelpers */,
 				9005727B24D31158002AE9BC /* NetworkLayer */,
-				9005725924D30DAD002AE9BC /* AppDelegate.swift */,
-				9005725D24D30DAD002AE9BC /* ViewController.swift */,
-				9005725F24D30DAD002AE9BC /* Main.storyboard */,
 				9005726224D30DAE002AE9BC /* Assets.xcassets */,
 				9005726424D30DAE002AE9BC /* LaunchScreen.storyboard */,
 				9005726724D30DAE002AE9BC /* Info.plist */,
@@ -188,12 +199,10 @@
 				9005728024D31158002AE9BC /* NetworkErrorType.swift */,
 				9005728124D31158002AE9BC /* HttpMethod.swift */,
 				9005728224D31158002AE9BC /* MimeType.swift */,
-				9005728324D31158002AE9BC /* SessionType.swift */,
 				9005728424D31158002AE9BC /* Response.swift */,
 				9005728524D31158002AE9BC /* Request.swift */,
 				9005728624D31158002AE9BC /* RootApiResponse.swift */,
 				900572AD24D312CF002AE9BC /* ErrorCode.swift */,
-				9005728724D31158002AE9BC /* MultipartData.swift */,
 				9005728824D31158002AE9BC /* EmptyDataModel.swift */,
 				9005728924D31158002AE9BC /* RequestParameters.swift */,
 				9005728A24D31158002AE9BC /* NetworkLogger.swift */,
@@ -218,6 +227,9 @@
 		900572AA24D3120C002AE9BC /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				900572D024D31A0C002AE9BC /* Environment */,
+				900572CB24D31956002AE9BC /* Requests */,
+				900572CC24D31979002AE9BC /* PixbayAppApi.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -235,6 +247,7 @@
 		900572B724D313C4002AE9BC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				900572D624D31DD4002AE9BC /* UIGestureRecognizer+Extensions.swift */,
 				900572B824D313CE002AE9BC /* UIViewController+KeyboardAvoidance.swift */,
 			);
 			path = Extensions;
@@ -250,6 +263,67 @@
 				900572C024D31861002AE9BC /* Coordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		900572C624D318DB002AE9BC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				900572C724D31904002AE9BC /* Dependencies */,
+				9005725924D30DAD002AE9BC /* AppDelegate.swift */,
+				900572E324D31F65002AE9BC /* AppEnvironment.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		900572C724D31904002AE9BC /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				900572C824D3191A002AE9BC /* DependencyProvider.swift */,
+				900572CE24D319AA002AE9BC /* HasPixbayAppApi.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		900572CB24D31956002AE9BC /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		900572D024D31A0C002AE9BC /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				900572D124D31A1E002AE9BC /* BaseEnvironment.swift */,
+				900572D424D31A80002AE9BC /* ProductionEnvironment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		900572D824D31E51002AE9BC /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				900572D924D31E5A002AE9BC /* AppFlow */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		900572D924D31E5A002AE9BC /* AppFlow */ = {
+			isa = PBXGroup;
+			children = (
+				900572DE24D31EB4002AE9BC /* Factory */,
+				900572DA24D31E6F002AE9BC /* AppCoordinator.swift */,
+			);
+			path = AppFlow;
+			sourceTree = "<group>";
+		};
+		900572DE24D31EB4002AE9BC /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				900572DF24D31EC6002AE9BC /* AppCoordinatorFactoryType.swift */,
+				900572E124D31EDB002AE9BC /* AppCoordinatorFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		9589B64935C6114BEEA532A6 /* Pods */ = {
@@ -359,7 +433,6 @@
 			files = (
 				9005726624D30DAE002AE9BC /* LaunchScreen.storyboard in Resources */,
 				9005726324D30DAE002AE9BC /* Assets.xcassets in Resources */,
-				9005726124D30DAD002AE9BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,27 +532,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9005729624D31158002AE9BC /* SessionType.swift in Sources */,
 				9005729824D31158002AE9BC /* Request.swift in Sources */,
-				9005725E24D30DAD002AE9BC /* ViewController.swift in Sources */,
 				900572A124D31158002AE9BC /* NetworkDispatcher.swift in Sources */,
 				900572B424D3133F002AE9BC /* NetfoxService.swift in Sources */,
 				9005725A24D30DAD002AE9BC /* AppDelegate.swift in Sources */,
-				9005729A24D31158002AE9BC /* MultipartData.swift in Sources */,
 				900572B324D3133F002AE9BC /* CameraService.swift in Sources */,
 				900572C324D31861002AE9BC /* Router.swift in Sources */,
 				900572B924D313CE002AE9BC /* UIViewController+KeyboardAvoidance.swift in Sources */,
 				900572C524D31861002AE9BC /* Coordinator.swift in Sources */,
 				900572A924D311D9002AE9BC /* RxSwift + URLSession.swift in Sources */,
+				900572C924D3191A002AE9BC /* DependencyProvider.swift in Sources */,
+				900572CF24D319AA002AE9BC /* HasPixbayAppApi.swift in Sources */,
 				9005729224D31158002AE9BC /* NetworkLoggerType.swift in Sources */,
 				9005729024D31158002AE9BC /* Dispatcher.swift in Sources */,
 				9005729924D31158002AE9BC /* RootApiResponse.swift in Sources */,
+				900572D724D31DD4002AE9BC /* UIGestureRecognizer+Extensions.swift in Sources */,
+				900572E224D31EDB002AE9BC /* AppCoordinatorFactory.swift in Sources */,
 				9005729F24D31158002AE9BC /* Operation.swift in Sources */,
+				900572E024D31EC6002AE9BC /* AppCoordinatorFactoryType.swift in Sources */,
 				9005729B24D31158002AE9BC /* EmptyDataModel.swift in Sources */,
+				900572DC24D31E6F002AE9BC /* AppCoordinator.swift in Sources */,
+				900572CD24D31979002AE9BC /* PixbayAppApi.swift in Sources */,
 				9005729424D31158002AE9BC /* HttpMethod.swift in Sources */,
 				9005729524D31158002AE9BC /* MimeType.swift in Sources */,
 				9005729724D31158002AE9BC /* Response.swift in Sources */,
 				9005729324D31158002AE9BC /* NetworkErrorType.swift in Sources */,
+				900572D224D31A1E002AE9BC /* BaseEnvironment.swift in Sources */,
 				900572A824D311D9002AE9BC /* Reachability.swift in Sources */,
 				9005728F24D31158002AE9BC /* ResponseHandler.swift in Sources */,
 				9005729124D31158002AE9BC /* Environment.swift in Sources */,
@@ -488,8 +566,10 @@
 				900572C124D31861002AE9BC /* Presentable.swift in Sources */,
 				900572AE24D312CF002AE9BC /* ErrorCode.swift in Sources */,
 				900572A024D31158002AE9BC /* HTTPHeaderName.swift in Sources */,
+				900572E424D31F65002AE9BC /* AppEnvironment.swift in Sources */,
 				9005729D24D31158002AE9BC /* NetworkLogger.swift in Sources */,
 				900572B524D3133F002AE9BC /* UserSettings.swift in Sources */,
+				900572D524D31A80002AE9BC /* ProductionEnvironment.swift in Sources */,
 				900572A724D311D9002AE9BC /* ReachabilityService.swift in Sources */,
 				900572C424D31861002AE9BC /* BaseCoordinator.swift in Sources */,
 				9005729C24D31158002AE9BC /* RequestParameters.swift in Sources */,
@@ -515,14 +595,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9005725F24D30DAD002AE9BC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9005726024D30DAD002AE9BC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9005726424D30DAE002AE9BC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
