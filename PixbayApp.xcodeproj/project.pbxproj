@@ -99,6 +99,11 @@
 		9038006424D3484A009F9033 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038006324D3484A009F9033 /* Constants.swift */; };
 		9038006624D34910009F9033 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038006524D34910009F9033 /* ActionButton.swift */; };
 		9038006824D34953009F9033 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038006724D34953009F9033 /* UIButton+Style.swift */; };
+		9038006D24D34E4E009F9033 /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9038006A24D34E4E009F9033 /* RegisterViewController.storyboard */; };
+		9038006E24D34E4E009F9033 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038006B24D34E4E009F9033 /* RegisterViewController.swift */; };
+		9038006F24D34E4E009F9033 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038006C24D34E4E009F9033 /* RegisterViewModel.swift */; };
+		9038007224D34F78009F9033 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038007124D34F78009F9033 /* NavigationController.swift */; };
+		9038007524D35A60009F9033 /* KeyboardAdjustableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038007424D35A60009F9033 /* KeyboardAdjustableScrollView.swift */; };
 		9038FFF324D32869009F9033 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038FFF124D32869009F9033 /* OnboardingCoordinator.swift */; };
 		9038FFF424D32869009F9033 /* OnboardingCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038FFF224D32869009F9033 /* OnboardingCoordinatorOutput.swift */; };
 		9038FFF724D32881009F9033 /* OnboardingCoordinatorModuleFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038FFF624D32881009F9033 /* OnboardingCoordinatorModuleFactoryType.swift */; };
@@ -217,6 +222,11 @@
 		9038006324D3484A009F9033 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9038006524D34910009F9033 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		9038006724D34953009F9033 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
+		9038006A24D34E4E009F9033 /* RegisterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterViewController.storyboard; sourceTree = "<group>"; };
+		9038006B24D34E4E009F9033 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9038006C24D34E4E009F9033 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		9038007124D34F78009F9033 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		9038007424D35A60009F9033 /* KeyboardAdjustableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdjustableScrollView.swift; sourceTree = "<group>"; };
 		9038FFF124D32869009F9033 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		9038FFF224D32869009F9033 /* OnboardingCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinatorOutput.swift; sourceTree = "<group>"; };
 		9038FFF624D32881009F9033 /* OnboardingCoordinatorModuleFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinatorModuleFactoryType.swift; sourceTree = "<group>"; };
@@ -480,6 +490,8 @@
 			children = (
 				9038001524D33810009F9033 /* TextField.swift */,
 				9038006524D34910009F9033 /* ActionButton.swift */,
+				9038007124D34F78009F9033 /* NavigationController.swift */,
+				9038007424D35A60009F9033 /* KeyboardAdjustableScrollView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -529,6 +541,16 @@
 			path = Gotham;
 			sourceTree = "<group>";
 		};
+		9038006924D34E31009F9033 /* RegisterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9038006A24D34E4E009F9033 /* RegisterViewController.storyboard */,
+				9038006B24D34E4E009F9033 /* RegisterViewController.swift */,
+				9038006C24D34E4E009F9033 /* RegisterViewModel.swift */,
+			);
+			path = RegisterViewController;
+			sourceTree = "<group>";
+		};
 		9038FFF024D3284E009F9033 /* OnboardingFlow */ = {
 			isa = PBXGroup;
 			children = (
@@ -552,6 +574,7 @@
 		9038FFFA24D328B9009F9033 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9038006924D34E31009F9033 /* RegisterViewController */,
 				9038000124D328DC009F9033 /* OnboardingViewController */,
 			);
 			path = Modules;
@@ -679,6 +702,7 @@
 				9038004124D346FD009F9033 /* Gotham-Light 3.otf in Resources */,
 				9038005B24D346FD009F9033 /* Gotham-BookItalic 2.otf in Resources */,
 				9038004B24D346FD009F9033 /* Gotham-Medium.otf in Resources */,
+				9038006D24D34E4E009F9033 /* RegisterViewController.storyboard in Resources */,
 				9038005624D346FD009F9033 /* Gotham-ThinItalic.otf in Resources */,
 				9038005024D346FD009F9033 /* Gotham-Medium 3.otf in Resources */,
 				9038004824D346FD009F9033 /* Gotham-LightItalic 3.otf in Resources */,
@@ -798,12 +822,14 @@
 				9038000D24D32B8F009F9033 /* ValidationType.swift in Sources */,
 				9005729824D31158002AE9BC /* Request.swift in Sources */,
 				900572A124D31158002AE9BC /* NetworkDispatcher.swift in Sources */,
+				9038006F24D34E4E009F9033 /* RegisterViewModel.swift in Sources */,
 				900572B424D3133F002AE9BC /* NetfoxService.swift in Sources */,
 				9005725A24D30DAD002AE9BC /* AppDelegate.swift in Sources */,
 				900572C324D31861002AE9BC /* Router.swift in Sources */,
 				900572B924D313CE002AE9BC /* UIViewController+KeyboardAvoidance.swift in Sources */,
 				9038005F24D34776009F9033 /* TextField+Validate.swift in Sources */,
 				900572C524D31861002AE9BC /* Coordinator.swift in Sources */,
+				9038006E24D34E4E009F9033 /* RegisterViewController.swift in Sources */,
 				9038001C24D33918009F9033 /* UILabel+Style.swift in Sources */,
 				900572A924D311D9002AE9BC /* RxSwift + URLSession.swift in Sources */,
 				900572C924D3191A002AE9BC /* DependencyProvider.swift in Sources */,
@@ -818,6 +844,7 @@
 				9038001324D333B2009F9033 /* UIColors+AppColors.swift in Sources */,
 				9038000A24D32B81009F9033 /* StoryboardLoadable.swift in Sources */,
 				9038001624D33810009F9033 /* TextField.swift in Sources */,
+				9038007524D35A60009F9033 /* KeyboardAdjustableScrollView.swift in Sources */,
 				9038001024D32C0A009F9033 /* UIViewController+Protocols.swift in Sources */,
 				9005729924D31158002AE9BC /* RootApiResponse.swift in Sources */,
 				900572D724D31DD4002AE9BC /* UIGestureRecognizer+Extensions.swift in Sources */,
@@ -840,6 +867,7 @@
 				900572A824D311D9002AE9BC /* Reachability.swift in Sources */,
 				9038FFF924D32887009F9033 /* OnboardingCoordinatorModuleFactory.swift in Sources */,
 				9005728F24D31158002AE9BC /* ResponseHandler.swift in Sources */,
+				9038007224D34F78009F9033 /* NavigationController.swift in Sources */,
 				9038001A24D338B4009F9033 /* UITextField+Style.swift in Sources */,
 				9005729124D31158002AE9BC /* Environment.swift in Sources */,
 				9005729E24D31158002AE9BC /* NetworkError.swift in Sources */,

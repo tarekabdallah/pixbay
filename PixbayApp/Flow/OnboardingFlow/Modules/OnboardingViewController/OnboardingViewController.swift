@@ -19,11 +19,18 @@ class OnboardingViewController: UIViewController {
     @IBOutlet private weak var registerButton: UIButton!
 
     var viewModel: OnboardingViewModel!
+    var onRegisterButtonTapped: (() -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureViews()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        navigationController?.navigationBar.isHidden = true
     }
 }
 
@@ -40,6 +47,15 @@ private extension OnboardingViewController {
         registerButton.setTitle(viewModel.registerButtonText)
 
         setupLoginButtonBottomConstraint()
+
+        registerButton
+            .rx
+            .tap
+            .asDriver()
+            .throttle(.seconds(2))
+            .drive(onNext: { [weak self] in
+                self?.onRegisterButtonTapped?()
+                }, onCompleted: nil).disposed(by: viewModel.disposeBag)
     }
 
     func setupLoginButtonBottomConstraint() {

@@ -12,10 +12,12 @@ extension UITextField {
     func applyStyle(textColor: UIColor = .primary,
                     backgroundColor: UIColor = .clear,
                     font: Fonts.FontName,
-                    size: Fonts.FontSize) {
+                    size: Fonts.FontSize,
+                    cornerRadius: CGFloat? = nil) {
         self.backgroundColor = backgroundColor
         self.textColor = textColor
         self.font = Fonts.font(name: font, size: size)
+        self.cornerRadius = cornerRadius ?? self.cornerRadius
     }
 
     func setPlaceholder(text: String?, alignment: NSTextAlignment = .natural) {

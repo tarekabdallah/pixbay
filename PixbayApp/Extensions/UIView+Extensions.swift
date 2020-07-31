@@ -76,4 +76,25 @@ extension UIView {
         backgroundColor = .clear
         layer.insertSublayer(backgroundLayer, at: 0)
     }
+
+    /// Returns the activeResponder inside a view. If none found returns nil
+    func findActiveResponder() -> UIView? {
+        return findActiveResponder(in: self)
+    }
+}
+
+// MARK: - Private Helper Methods
+private extension UIView {
+    func findActiveResponder(in view: UIView) -> UIView? {
+        if view.isFirstResponder {
+            return view
+        } else {
+            for subview in view.subviews {
+                if let firstResponder = findActiveResponder(in: subview) {
+                    return firstResponder
+                }
+            }
+        }
+        return nil
+    }
 }

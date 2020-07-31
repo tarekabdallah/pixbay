@@ -11,4 +11,6 @@ import Foundation
 protocol OnboardingCoordinatorModuleFactoryType {
     func makeOnboardingViewController(dependencies: OnboardingViewModel.Dependencies)
         -> OnboardingViewController
+    func makeRegisterViewController(dependencies: RegisterViewModel.Dependencies)
+        -> RegisterViewController
 }

@@ -17,6 +17,9 @@ class OnboardingCoordinator: BaseCoordinator, OnboardingCoordinatorOutput {
 
     lazy var onboardingViewController: OnboardingViewController = {
         let onboardingViewController = moduleFactory.makeOnboardingViewController(dependencies: dependencies)
+        onboardingViewController.onRegisterButtonTapped = { [unowned self] in
+            self.showRegisterViewController()
+        }
         return onboardingViewController
     }()
 
@@ -40,5 +43,10 @@ class OnboardingCoordinator: BaseCoordinator, OnboardingCoordinatorOutput {
 extension OnboardingCoordinator {
     func showOnboardingViewController() {
         router.setRoot(onboardingViewController)
+    }
+
+    func showRegisterViewController() {
+        let registerViewController = moduleFactory.makeRegisterViewController(dependencies: dependencies)
+        router.push(registerViewController, animated: true, onPop: nil)
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class TextField: UITextField {
-
+    
     override var placeholder: String? {
         didSet {
             DispatchQueue.main.async { [weak self] in
@@ -18,19 +18,19 @@ class TextField: UITextField {
             }
         }
     }
-
+    
     var errorHint: String? {
         didSet {
             errorLabel.text = errorHint
         }
     }
-
+    
     var hasError = false {
         didSet {
             errorLabel.isHidden = !hasError
         }
     }
-
+    
     lazy var errorLabel: UILabel = {
         let errorLabel = UILabel()
         errorLabel.applyStyle(textColor: .destructive,
@@ -45,22 +45,22 @@ class TextField: UITextField {
         errorLabel.isHidden = true
         return errorLabel
     }()
-
+    
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10))
     }
-
+    
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         return editingRect(forBounds: bounds)
     }
-
+    
     override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
         return editingRect(forBounds: bounds)
     }
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
         configureViews()
     }
 }
@@ -72,7 +72,8 @@ private extension TextField {
             self?.applyStyle(textColor: .purple,
                              backgroundColor: .white,
                              font: .medium,
-                             size: .default)
+                             size: .default,
+                             cornerRadius: 10)
             self?.borderStyle = .none
             self?.tintColor = .purple
             self?.setBorder(borderColor: .lightGray,

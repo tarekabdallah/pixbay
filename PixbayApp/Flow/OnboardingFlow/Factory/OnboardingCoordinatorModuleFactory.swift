@@ -15,4 +15,11 @@ struct OnboardingCoordinatorModuleFactory: OnboardingCoordinatorModuleFactoryTyp
             onboardingViewController.viewModel = OnboardingViewModel(dependencies: dependencies)
             return onboardingViewController
     }
+
+    func makeRegisterViewController(dependencies: RegisterViewModel.Dependencies)
+        -> RegisterViewController {
+            let registerViewController = RegisterViewController.loadFromStoryboard()
+            registerViewController.viewModel = RegisterViewModel(dependencies: dependencies)
+            return registerViewController
+    }
 }

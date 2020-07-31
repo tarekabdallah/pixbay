@@ -11,3 +11,7 @@
 "onboarding_scene.placeholder.email_text" = "Email";
 "onboarding_scene.placeholder.password_text" = "Password";
 "onboarding_scene.button.register_text" = "Register?";
+
+// MARK: - Register Screen
+"register_scene.label.title_text" = "Register";
+"register_scene.placeholder.age_text" = "Age";

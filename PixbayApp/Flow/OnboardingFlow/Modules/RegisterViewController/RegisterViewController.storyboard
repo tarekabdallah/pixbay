@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Register View Controller-->
+        <scene sceneID="4SA-zD-bwI">
+            <objects>
+                <viewController storyboardIdentifier="RegisterViewController" id="2wO-cr-JXA" customClass="RegisterViewController" customModule="PixbayApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dA8-3Z-0x2"/>
+                        <viewControllerLayoutGuide type="bottom" id="lbl-Rk-BF1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XpQ-A0-OKp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oC5-R0-pId" customClass="KeyboardAdjustableScrollView" customModule="PixbayApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25s-VD-bOt">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xOR-CP-inl" customClass="TextField" customModule="PixbayApp" customModuleProvider="target">
+                                                <rect key="frame" x="32" y="32" width="350" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="gwg-XX-KEl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" secureTextEntry="YES"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qgC-dJ-gfO" customClass="TextField" customModule="PixbayApp" customModuleProvider="target">
+                                                <rect key="frame" x="32" y="98" width="350" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" secureTextEntry="YES"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6dS-tL-pms" customClass="TextField" customModule="PixbayApp" customModuleProvider="target">
+                                                <rect key="frame" x="32" y="164" width="350" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGX-jo-eCJ" customClass="ActionButton" customModule="PixbayApp" customModuleProvider="target">
+                                                <rect key="frame" x="32" y="736" width="350" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="0oY-Up-Dl6"/>
+                                                </constraints>
+                                                <state key="normal" title="Save"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="tGX-jo-eCJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6dS-tL-pms" secondAttribute="bottom" priority="500" constant="32" id="0Co-cf-bdw"/>
+                                            <constraint firstItem="xOR-CP-inl" firstAttribute="top" secondItem="25s-VD-bOt" secondAttribute="top" constant="32" id="4eA-Le-ZpX"/>
+                                            <constraint firstItem="6dS-tL-pms" firstAttribute="trailing" secondItem="qgC-dJ-gfO" secondAttribute="trailing" id="Dgw-GI-LdG"/>
+                                            <constraint firstAttribute="bottom" secondItem="tGX-jo-eCJ" secondAttribute="bottom" constant="32" id="GCj-fJ-Thu"/>
+                                            <constraint firstItem="qgC-dJ-gfO" firstAttribute="trailing" secondItem="xOR-CP-inl" secondAttribute="trailing" id="GyU-S9-9ls"/>
+                                            <constraint firstItem="6dS-tL-pms" firstAttribute="leading" secondItem="qgC-dJ-gfO" secondAttribute="leading" id="Rgk-17-AuO"/>
+                                            <constraint firstItem="qgC-dJ-gfO" firstAttribute="top" secondItem="xOR-CP-inl" secondAttribute="bottom" constant="16" id="T89-aM-KSe"/>
+                                            <constraint firstItem="xOR-CP-inl" firstAttribute="centerX" secondItem="25s-VD-bOt" secondAttribute="centerX" id="VHE-6V-bDx"/>
+                                            <constraint firstItem="xOR-CP-inl" firstAttribute="leading" secondItem="25s-VD-bOt" secondAttribute="leading" constant="32" id="YQ2-6R-6g6"/>
+                                            <constraint firstItem="tGX-jo-eCJ" firstAttribute="trailing" secondItem="6dS-tL-pms" secondAttribute="trailing" id="ab0-64-xOE"/>
+                                            <constraint firstItem="qgC-dJ-gfO" firstAttribute="leading" secondItem="xOR-CP-inl" secondAttribute="leading" id="b38-y7-iWH"/>
+                                            <constraint firstItem="tGX-jo-eCJ" firstAttribute="leading" secondItem="6dS-tL-pms" secondAttribute="leading" id="beF-jU-WIP"/>
+                                            <constraint firstItem="qgC-dJ-gfO" firstAttribute="height" secondItem="xOR-CP-inl" secondAttribute="height" id="fxs-DI-ReW"/>
+                                            <constraint firstItem="6dS-tL-pms" firstAttribute="top" secondItem="qgC-dJ-gfO" secondAttribute="bottom" constant="16" id="iun-az-Tid"/>
+                                            <constraint firstItem="6dS-tL-pms" firstAttribute="height" secondItem="qgC-dJ-gfO" secondAttribute="height" id="yn1-6s-SpC"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="25s-VD-bOt" firstAttribute="width" secondItem="oC5-R0-pId" secondAttribute="width" id="3Au-OL-Bgk"/>
+                                    <constraint firstItem="25s-VD-bOt" firstAttribute="leading" secondItem="oC5-R0-pId" secondAttribute="leading" id="A9d-1t-gM3"/>
+                                    <constraint firstAttribute="bottom" secondItem="25s-VD-bOt" secondAttribute="bottom" id="gzg-FK-87Y"/>
+                                    <constraint firstItem="25s-VD-bOt" firstAttribute="top" secondItem="oC5-R0-pId" secondAttribute="top" id="omT-rm-zV1"/>
+                                    <constraint firstAttribute="trailing" secondItem="25s-VD-bOt" secondAttribute="trailing" id="pPc-Qp-iSl"/>
+                                    <constraint firstItem="25s-VD-bOt" firstAttribute="height" secondItem="oC5-R0-pId" secondAttribute="height" id="s3j-ro-D0j"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oC5-R0-pId" secondAttribute="trailing" id="4CW-gf-R8Y"/>
+                            <constraint firstItem="lbl-Rk-BF1" firstAttribute="top" secondItem="oC5-R0-pId" secondAttribute="bottom" placeholder="YES" id="fzd-kO-VRR"/>
+                            <constraint firstItem="oC5-R0-pId" firstAttribute="top" secondItem="dA8-3Z-0x2" secondAttribute="bottom" id="gWz-3b-b0I"/>
+                            <constraint firstItem="oC5-R0-pId" firstAttribute="leading" secondItem="XpQ-A0-OKp" secondAttribute="leading" id="qQb-CZ-Lfz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ageTextField" destination="6dS-tL-pms" id="V93-uR-t9h"/>
+                        <outlet property="emailTextField" destination="xOR-CP-inl" id="UPo-pJ-oIA"/>
+                        <outlet property="passwordTextField" destination="qgC-dJ-gfO" id="3HG-uk-rSq"/>
+                        <outlet property="registerButton" destination="tGX-jo-eCJ" id="Aeg-7O-b6h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Eh-L1-vKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>

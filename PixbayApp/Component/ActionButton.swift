@@ -15,6 +15,11 @@ class ActionButton: UIButton {
 
         configureViews()
     }
+
+    func set(textColor: UIColor, backgroundColor: UIColor) {
+        self.backgroundColor = backgroundColor
+        setTitleColor(textColor, for: .normal)
+    }
 }
 
 // MARK: - Private Helper Methods

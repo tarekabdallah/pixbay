@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Router: NSObject, RouterType {
+class Router: RouterType {
     private var completions: [UIViewController : () -> Void]
 
     var navigationController: UINavigationController
@@ -17,11 +17,9 @@ class Router: NSObject, RouterType {
         return navigationController.viewControllers.first
     }
 
-    init(navigationController: UINavigationController = UINavigationController()) {
+    init(navigationController: UINavigationController = NavigationController()) {
         self.navigationController = navigationController
-        self.navigationController.navigationBar.isHidden = true
         self.completions = [:]
-        super.init()
     }
 
     func present(_ module: Presentable, animated: Bool, presentationStyle: UIModalPresentationStyle) {
@@ -30,12 +28,13 @@ class Router: NSObject, RouterType {
         navigationController.present(presentedModule, animated: animated, completion: nil)
     }
 
-    func push(_ module: Presentable, animated: Bool, onPop: (() -> Void)? = nil) {
+    func push(_ module: Presentable, animated: Bool, onPop: (() -> Void)?) {
         let pushModule = module.toPresent()
         guard !(pushModule is UINavigationController) else { return }
         if let completion = onPop {
             completions[pushModule] = completion
         }
+        navigationController.navigationBar.isHidden = false
         navigationController.pushViewController(pushModule, animated: animated)
     }
 
