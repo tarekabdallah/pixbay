@@ -20,6 +20,7 @@ class OnboardingViewController: UIViewController {
 
     var viewModel: OnboardingViewModel!
     var onRegisterButtonTapped: (() -> Void)?
+    var loggedInSuccessfully: (() -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,14 +48,26 @@ private extension OnboardingViewController {
         registerButton.setTitle(viewModel.registerButtonText)
 
         setupLoginButtonBottomConstraint()
+        setupRxButtons()
+    }
 
+    func setupRxButtons() {
         registerButton
             .rx
             .tap
             .asDriver()
             .throttle(.seconds(2))
-            .drive(onNext: { [weak self] in
-                self?.onRegisterButtonTapped?()
+            .drive(onNext: { [unowned self] in
+                self.onRegisterButtonTapped?()
+                }, onCompleted: nil).disposed(by: viewModel.disposeBag)
+
+        loginButton
+            .rx
+            .tap
+            .asDriver()
+            .throttle(.seconds(2))
+            .drive(onNext: { [unowned self] in
+                self.loggedInSuccessfully?()
                 }, onCompleted: nil).disposed(by: viewModel.disposeBag)
     }
 

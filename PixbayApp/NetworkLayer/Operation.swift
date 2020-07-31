@@ -12,14 +12,17 @@ import RxSwift
 protocol Operation: ResponseHandler {
     associatedtype Output: Decodable
 
+    var request: Request { get }
+    var disposeBag: DisposeBag { get set }
+
     func execute(in dispatcher: Dispatcher) -> Single<Output>
 }
 
-extension Operation where Self: Request {
+extension Operation {
     func execute(in dispatcher: Dispatcher) -> Single<Output> {
         return Single<Output>.create { single in
             do {
-                try dispatcher.execute(request: self).subscribe(onSuccess: { response in
+                try dispatcher.execute(request: self.request).subscribe(onSuccess: { response in
                     do {
                         guard let outputObject = try self.handle(response: response) else {
                             return

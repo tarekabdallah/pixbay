@@ -12,4 +12,5 @@ protocol Environment {
     var name: String { get }
     var host: String { get }
     var headers: [HTTPHeaderName: String?] { get }
+    var apiKey: String { get }
 }

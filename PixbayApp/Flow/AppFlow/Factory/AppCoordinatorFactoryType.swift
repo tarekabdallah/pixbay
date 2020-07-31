@@ -13,4 +13,9 @@ protocol AppCoordinatorFactoryType {
                                    dependencies: OnboardingCoordinator.Dependencies,
                                    moduleFactory: OnboardingCoordinatorModuleFactoryType)
     -> Coordinator & OnboardingCoordinatorOutput
+
+    func makeHomeCoordinator(router: RouterType,
+                             dependencies: HomeCoordinator.Dependencies,
+                             moduleFactory: HomeCoordinatorModuleFactoryType)
+        -> Coordinator & HomeCoordinatorOutput
 }

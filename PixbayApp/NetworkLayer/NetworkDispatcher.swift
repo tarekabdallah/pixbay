@@ -57,8 +57,9 @@ class NetworkDispatcher: Dispatcher {
                 return urlRequest
             }
 
-            let queryItem = parameters.map { param in
-                URLQueryItem(name: param.key, value: String(describing: param.value))
+            let queryItem = parameters.compactMap { param -> URLQueryItem? in
+                guard let value = param.value else { return nil }
+                return URLQueryItem(name: param.key, value: String(describing: value))
             }
             urlComponents.queryItems = queryItem
             urlRequest.url = urlComponents.url
@@ -67,6 +68,11 @@ class NetworkDispatcher: Dispatcher {
                 urlRequest.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
                 urlRequest.addValue("application/json", forHTTPHeaderField: HTTPHeaderName.contentType.rawValue)
             }
+        }
+
+        if let url = urlRequest.url, var urlComponents = URLComponents(string: url.absoluteString) {
+            urlComponents.queryItems?.append(URLQueryItem(name: "key", value: environment.apiKey))
+            urlRequest.url = urlComponents.url
         }
 
         return urlRequest

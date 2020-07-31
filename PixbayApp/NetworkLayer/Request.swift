@@ -10,7 +10,6 @@ import Foundation
 import RxSwift
 
 protocol Request {
-    var disposeBag: DisposeBag { get }
     var path: String { get }
     var parameters: RequestParameters { get }
     var headers: [HTTPHeaderName: String]? { get }

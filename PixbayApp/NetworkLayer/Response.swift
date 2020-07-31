@@ -9,7 +9,7 @@
 import Foundation
 
 enum Response {
-    case success(_ errorCode: Int?, Data)
+    case success(Data)
     case failure(error: Error)
 
     init(_ httpURLResponse: HTTPURLResponse?, data: Data?, error: Error?) {
@@ -26,6 +26,6 @@ enum Response {
             return
         }
 
-        self = .success(statusCode, data)
+        self = .success(data)
     }
 }

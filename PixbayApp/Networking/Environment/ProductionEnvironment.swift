@@ -14,6 +14,10 @@ class ProductionEnvironment: BaseEnvironment {
     }
 
     override var host: String {
-        "https://pixabay.com/api/"
+        "https://pixabay.com/api"
+    }
+
+    override var apiKey: String {
+        "17716069-d692763fa430726c3faa15f7c"
     }
 }

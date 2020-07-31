@@ -17,6 +17,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet private weak var ageTextField: TextField!
     @IBOutlet private weak var registerButton: ActionButton!
     var viewModel: RegisterViewModel!
+    var registeredSuccessfully: (() -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,5 +36,17 @@ private extension RegisterViewController {
         passwordTextField.placeholder = viewModel.passwordPlaceholderText
         ageTextField.placeholder = viewModel.agePlaceholderText
         registerButton.setTitle(viewModel.titleText)
+        setUpRXButtons()
+    }
+
+    func setUpRXButtons() {
+        registerButton
+            .rx
+            .tap
+            .asDriver()
+            .throttle(.seconds(2))
+            .drive(onNext: { [unowned self] in
+                self.registeredSuccessfully?()
+                }, onCompleted: nil).disposed(by: viewModel.disposeBag)
     }
 }

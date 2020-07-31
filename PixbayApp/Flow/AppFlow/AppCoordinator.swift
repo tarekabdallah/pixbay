@@ -45,6 +45,15 @@ extension AppCoordinator {
     }
 
     func runMainFlow() {
-
+        var homeCoordinator = coordinatorFactory
+            .makeHomeCoordinator(router: router,
+                                 dependencies: dependencyProvider,
+                                 moduleFactory: HomeCoordinatorModuleFactory())
+        homeCoordinator.finishFlow = { [weak self, weak homeCoordinator] in
+            self?.runOnboardingFlow()
+            self?.removeChild(coordinator: homeCoordinator)
+        }
+        addChild(coordinator: homeCoordinator)
+        homeCoordinator.start()
     }
 }

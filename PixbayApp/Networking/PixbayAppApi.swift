@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 class PixbayAppApi {
 
@@ -16,4 +17,8 @@ class PixbayAppApi {
         self.dispatcher = dispatcher
     }
 
+    func fetchImages(searchText: String?, page: Int) -> Single<[ImageModel]> {
+        let request = FetchImagesRequest(page: page, searchText: searchText)
+        return NetworkOperation<[ImageModel]>(request: request).execute(in: dispatcher)
+    }
 }

@@ -20,4 +20,8 @@ class BaseEnvironment: Environment {
     var headers: [HTTPHeaderName: String?] {
         return [:]
     }
+
+    var apiKey: String {
+        fatalError("Must be implemented in subclass")
+    }
 }

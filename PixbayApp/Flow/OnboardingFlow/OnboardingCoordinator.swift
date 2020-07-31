@@ -20,6 +20,9 @@ class OnboardingCoordinator: BaseCoordinator, OnboardingCoordinatorOutput {
         onboardingViewController.onRegisterButtonTapped = { [unowned self] in
             self.showRegisterViewController()
         }
+        onboardingViewController.loggedInSuccessfully = { [weak self] in
+            self?.finishFlow?()
+        }
         return onboardingViewController
     }()
 
@@ -47,6 +50,9 @@ extension OnboardingCoordinator {
 
     func showRegisterViewController() {
         let registerViewController = moduleFactory.makeRegisterViewController(dependencies: dependencies)
+        registerViewController.registeredSuccessfully = { [weak self] in
+            self?.finishFlow?()
+        }
         router.push(registerViewController, animated: true, onPop: nil)
     }
 }

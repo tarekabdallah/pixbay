@@ -14,16 +14,12 @@ protocol ResponseHandler {
 
 extension ResponseHandler where Self: Operation {
     func handle(response: Response) throws -> Output? {
-        if case let Response.success(statusCode, data) = response {
+        if case let Response.success(data) = response {
             let decoder = JSONDecoder()
             guard let decodedResponse = try? decoder.decode(RootApiResponse<Output>.self, from: data) else {
                 throw NetworkErrorType.parsingError
             }
-
-            if !decodedResponse.success {
-                throw NetworkError(statusCode: statusCode, message: decodedResponse.message ?? "")
-            }
-            return decodedResponse.data ?? EmptyDataModel() as? Output
+            return decodedResponse.hits ?? EmptyDataModel() as? Output
         } else if Output.self == EmptyDataModel.self {
             return EmptyDataModel() as? Output
         }

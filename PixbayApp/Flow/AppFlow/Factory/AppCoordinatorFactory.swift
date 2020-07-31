@@ -18,4 +18,14 @@ struct AppCoordinatorFactory: AppCoordinatorFactoryType {
                                                               moduleFactory: moduleFactory)
             return onboardingCoordinator
     }
+
+    func makeHomeCoordinator(router: RouterType,
+                             dependencies: HomeCoordinator.Dependencies,
+                             moduleFactory: HomeCoordinatorModuleFactoryType)
+        -> Coordinator & HomeCoordinatorOutput {
+            let homeCoordinator = HomeCoordinator(router: router,
+                                                  dependencies: dependencies,
+                                                  moduleFactory: moduleFactory)
+            return homeCoordinator
+    }
 }

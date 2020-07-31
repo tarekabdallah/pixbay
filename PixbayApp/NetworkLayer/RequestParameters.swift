@@ -9,7 +9,7 @@
 import Foundation
 
 enum RequestParameters {
-    case body([String: Any]?)
-    case query([String: Any]?)
+    case body([String: Any?]?)
+    case query([String: Any?]?)
     case array([Any]?)
 }
