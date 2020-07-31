@@ -18,4 +18,12 @@ struct ImageCellViewModel {
     var imageHeight: CGFloat {
         CGFloat(image.previewHeight)
     }
+
+    var tags: [String] {
+        image
+            .tags
+            .split(separator: ",")
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+
+    }
 }

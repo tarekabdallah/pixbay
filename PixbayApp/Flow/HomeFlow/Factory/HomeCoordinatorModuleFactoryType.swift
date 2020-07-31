@@ -10,4 +10,5 @@ import Foundation
 
 protocol HomeCoordinatorModuleFactoryType {
     func makeHomeViewController(dependencies: HomeViewModel.Dependencies) -> HomeViewController
+    func makeImageDetailsViewController(imageDetails: ImageModel) -> ImageDetailsViewController
 }

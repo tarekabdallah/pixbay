@@ -9,6 +9,10 @@
 import Foundation
 
 extension String {
+    var capitalizingFirstLetter: String {
+        return prefix(1).capitalized + dropFirst()
+    }
+
     func containsInsensitive(_ element: String) -> Bool {
         return trimmingCharacters(in: .whitespacesAndNewlines)
             .folding(options: [.diacriticInsensitive, .caseInsensitive, .widthInsensitive], locale: .current)

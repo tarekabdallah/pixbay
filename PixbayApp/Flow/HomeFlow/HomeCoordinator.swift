@@ -17,6 +17,9 @@ class HomeCoordinator: BaseCoordinator, HomeCoordinatorOutput {
 
     lazy var homeViewController: HomeViewController = {
         let homeViewController = moduleFactory.makeHomeViewController(dependencies: dependencies)
+        homeViewController.onImageSelected = { [unowned self] imageDetails in
+            self.showImageDetailsViewController(imageDetails: imageDetails)
+        }
         return homeViewController
     }()
 
@@ -40,5 +43,10 @@ class HomeCoordinator: BaseCoordinator, HomeCoordinatorOutput {
 extension HomeCoordinator {
     func showHomeViewController() {
         router.setRoot(homeViewController)
+    }
+
+    func showImageDetailsViewController(imageDetails: ImageModel) {
+        let imageDetailsViewController = moduleFactory.makeImageDetailsViewController(imageDetails: imageDetails)
+        router.push(imageDetailsViewController, animated: true, onPop: nil)
     }
 }

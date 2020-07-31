@@ -14,4 +14,10 @@ struct HomeCoordinatorModuleFactory: HomeCoordinatorModuleFactoryType {
         homeViewController.viewModel = HomeViewModel(dependencies: dependencies)
         return homeViewController
     }
+
+    func makeImageDetailsViewController(imageDetails: ImageModel) -> ImageDetailsViewController {
+        let imageDetailsViewController = ImageDetailsViewController.loadFromStoryboard()
+        imageDetailsViewController.viewModel = ImageDetailsViewModel(imageDetails: imageDetails)
+        return imageDetailsViewController
+    }
 }

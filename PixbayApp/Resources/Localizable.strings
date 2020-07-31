@@ -15,3 +15,13 @@
 // MARK: - Register Screen
 "register_scene.label.title_text" = "Register";
 "register_scene.placeholder.age_text" = "Age";
+
+// MARK: - Image Details Scene
+"image_details_scene.label.title_text" = "Details";
+
+// MARK: - Image Details Cell
+"image_details_cell.label.size_text" = "Image size: %dx%d";
+"image_details_cell.label.type_text" = "%@";
+
+// MARK: - Home Scene
+"home_scene.placeholer.search_text" = "Search";

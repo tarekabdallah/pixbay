@@ -10,6 +10,7 @@ import Foundation
 
 struct ImageModel: Codable {
     let id: Int
+    let type: String
     let tags: String
     let previewURL: String
     let previewWidth: Int

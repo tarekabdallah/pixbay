@@ -13,32 +13,39 @@ import RxSwift
 class HomeViewModel {
     typealias Dependencies = HasPixbayAppApi
 
-    let titleText = "".localized
+    let searchPlaceholderText = "home_scene.placeholer.search_text".localized
+
     let dependencies: Dependencies
     let disposeBag = DisposeBag()
     private var currentPage = 1
     var fetchedImages = [ImageModel]() {
         didSet {
-            filteredImages.accept(fetchedImages)
+            displayedImages.accept(fetchedImages)
         }
     }
 
-    var filteredImages = PublishRelay<[ImageModel]>()
+    var displayedImages = PublishRelay<[ImageModel]>()
 
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
     }
 
-    func fetchImages(with searchText: String? = nil, restPages: Bool = false) -> Single<Void> {
-        if restPages {
+    func fetchImages(with searchText: String? = nil, resetPages: Bool = false) -> Single<Void> {
+        if resetPages {
             currentPage = 1
         }
 
-        return dependencies.pixbayAppApi.fetchImages(searchText: searchText,
-                                                     page: currentPage).map { [weak self] images -> Void in
-            self?.currentPage += 1
-            self?.fetchedImages.append(contentsOf: images)
-            return
-        }
+        return dependencies
+            .pixbayAppApi
+            .fetchImages(searchText: searchText,
+                         page: currentPage).map { [weak self] images -> Void in
+                            self?.currentPage += 1
+                            if resetPages {
+                                self?.fetchedImages = images
+                            } else {
+                                self?.fetchedImages.append(contentsOf: images)
+                            }
+                            return
+            }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ImageTableViewCell.swift
+//  ImageDetailsTableViewCell.swift
 //  PixbayApp
 //
 //  Created by Tarek Abdallah on 7/31/20.
@@ -7,15 +7,16 @@
 //
 
 import UIKit
-import Kingfisher
 
-class ImageTableViewCell: UITableViewCell {
+class ImageDetailsTableViewCell: UITableViewCell {
 
-    @IBOutlet private weak var pixbayImageView: UIImageView!
-    @IBOutlet private weak var userNameLabel: UILabel!
+    @IBOutlet private weak var fullSizeImageView: UIImageView!
+    @IBOutlet private weak var imageSizeLabel: UILabel!
+    @IBOutlet private weak var imageTypeLabel: UILabel!
+    @IBOutlet private weak var collectionViewHeight: NSLayoutConstraint!
     @IBOutlet private weak var tagsCollectionView: UICollectionView!
 
-    var viewModel: ImageCellViewModel!
+    var viewModel: ImageDetailsCellViewModel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,29 +24,38 @@ class ImageTableViewCell: UITableViewCell {
         configureViews()
     }
 
-    func configure(with viewModel: ImageCellViewModel) {
+    func configure(with viewModel: ImageDetailsCellViewModel) {
         self.viewModel = viewModel
-        pixbayImageView.setImage(from: viewModel.image.previewURL, placeHolder: UIImage(systemName: "logo"))
-        userNameLabel.text = viewModel.image.user.capitalizingFirstLetter
+        fullSizeImageView.setImage(from: viewModel.imageDetails.largeImageURL,
+                                   placeHolder: UIImage(named: "logo"))
+        imageSizeLabel.text = viewModel.imageSizeText
+        imageTypeLabel.text = viewModel.imageTypeText.capitalizingFirstLetter
         tagsCollectionView.reloadData()
+        updateCollectionViewHeight()
     }
 }
 
 // MARK: - Private Helper Methods
-private extension ImageTableViewCell {
+private extension ImageDetailsTableViewCell {
     func configureViews() {
-        userNameLabel.applyStyle(textColor: .darkText, font: .medium, size: .title)
+        imageSizeLabel.applyStyle(textColor: .darkText, font: .medium, size: .default)
+        imageTypeLabel.applyStyle(textColor: .darkText, font: .medium, size: .title)
         tagsCollectionView.register(cell: TagCollectionViewCell.self)
         if let flowLayout = tagsCollectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-            flowLayout.minimumInteritemSpacing = 8
         }
         tagsCollectionView.dataSource = self
+    }
+
+    func updateCollectionViewHeight() {
+        let height = tagsCollectionView.collectionViewLayout.collectionViewContentSize.height
+        collectionViewHeight.constant = height
+        layoutIfNeeded()
     }
 }
 
 // MARK: - UICollectionViewDataSource
-extension ImageTableViewCell: UICollectionViewDataSource {
+extension ImageDetailsTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         return viewModel?.tags.count ?? 0
