@@ -80,7 +80,6 @@ private extension TextField {
                             borderWidth: 1)
             self?.dropShadow()
             self?.drawBackground()
-            self?.errorHint = "tk;bdvndsaklgjfks;'lafmw;l'dsest"
         }
     }
 }

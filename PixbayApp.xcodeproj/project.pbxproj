@@ -57,6 +57,11 @@
 		901DDE3824D43C5800E4FA0E /* PixbayApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE3624D43C5800E4FA0E /* PixbayApp.xcdatamodeld */; };
 		901DDE3A24D43CEF00E4FA0E /* HasUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE3924D43CEF00E4FA0E /* HasUserRepository.swift */; };
 		901DDE3C24D43E4400E4FA0E /* CDUser+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE3B24D43E4400E4FA0E /* CDUser+Extensions.swift */; };
+		901DDE3F24D4665300E4FA0E /* DropdownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE3E24D4665300E4FA0E /* DropdownTextField.swift */; };
+		901DDE4124D466F900E4FA0E /* Numeric+DropDownItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE4024D466F900E4FA0E /* Numeric+DropDownItem.swift */; };
+		901DDE4324D4670D00E4FA0E /* DropDownItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE4224D4670D00E4FA0E /* DropDownItem.swift */; };
+		901DDE4524D467D200E4FA0E /* DropdownStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE4424D467D200E4FA0E /* DropdownStyle.swift */; };
+		901DDE4724D4734D00E4FA0E /* DisplaysAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE4624D4734D00E4FA0E /* DisplaysAlert.swift */; };
 		9038000024D328D9009F9033 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038FFFD24D328D9009F9033 /* OnboardingViewModel.swift */; };
 		9038000424D329B0009F9033 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9038000324D329B0009F9033 /* Localizable.strings */; };
 		9038000624D329D8009F9033 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038000524D329D8009F9033 /* String+Localization.swift */; };
@@ -148,7 +153,7 @@
 		90BBCE4024D40BA0006C2E69 /* TagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90BBCE3E24D40BA0006C2E69 /* TagCollectionViewCell.xib */; };
 		90BBCE4224D40BA9006C2E69 /* TagCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBCE4124D40BA9006C2E69 /* TagCellViewModel.swift */; };
 		90BBCE4624D42208006C2E69 /* InteractionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBCE4524D42207006C2E69 /* InteractionImage.swift */; };
-		90BBCE4824D422D2006C2E69 /* Numeric+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBCE4724D422D2006C2E69 /* Numeric+Extensions.swift */; };
+		90BBCE4824D422D2006C2E69 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBCE4724D422D2006C2E69 /* Int+Extensions.swift */; };
 		A53C3127CCEA284B3E1CA075 /* Pods_PixbayApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6ADC83D3DA140057863840B /* Pods_PixbayApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -220,6 +225,11 @@
 		901DDE3724D43C5800E4FA0E /* PixbayApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PixbayApp.xcdatamodel; sourceTree = "<group>"; };
 		901DDE3924D43CEF00E4FA0E /* HasUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasUserRepository.swift; sourceTree = "<group>"; };
 		901DDE3B24D43E4400E4FA0E /* CDUser+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDUser+Extensions.swift"; sourceTree = "<group>"; };
+		901DDE3E24D4665300E4FA0E /* DropdownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownTextField.swift; sourceTree = "<group>"; };
+		901DDE4024D466F900E4FA0E /* Numeric+DropDownItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numeric+DropDownItem.swift"; sourceTree = "<group>"; };
+		901DDE4224D4670D00E4FA0E /* DropDownItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownItem.swift; sourceTree = "<group>"; };
+		901DDE4424D467D200E4FA0E /* DropdownStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownStyle.swift; sourceTree = "<group>"; };
+		901DDE4624D4734D00E4FA0E /* DisplaysAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaysAlert.swift; sourceTree = "<group>"; };
 		9038000324D329B0009F9033 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		9038000524D329D8009F9033 /* String+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		9038000924D32B81009F9033 /* StoryboardLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
@@ -311,7 +321,7 @@
 		90BBCE3E24D40BA0006C2E69 /* TagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCollectionViewCell.xib; sourceTree = "<group>"; };
 		90BBCE4124D40BA9006C2E69 /* TagCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCellViewModel.swift; sourceTree = "<group>"; };
 		90BBCE4524D42207006C2E69 /* InteractionImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionImage.swift; sourceTree = "<group>"; };
-		90BBCE4724D422D2006C2E69 /* Numeric+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numeric+Extensions.swift"; sourceTree = "<group>"; };
+		90BBCE4724D422D2006C2E69 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		C77250FD1D4777DE6CAD16B3 /* Pods_PixbayAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixbayAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6ADC83D3DA140057863840B /* Pods_PixbayApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixbayApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -462,8 +472,9 @@
 				9038009F24D3DD64009F9033 /* UITableView+Extensions.swift */,
 				903800A224D3E5C4009F9033 /* UIImage+Extensions.swift */,
 				90BBCE3A24D40004006C2E69 /* UICollectionView+Extensions.swift */,
-				90BBCE4724D422D2006C2E69 /* Numeric+Extensions.swift */,
+				90BBCE4724D422D2006C2E69 /* Int+Extensions.swift */,
 				901DDE3B24D43E4400E4FA0E /* CDUser+Extensions.swift */,
+				901DDE4024D466F900E4FA0E /* Numeric+DropDownItem.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -497,6 +508,7 @@
 				900572C824D3191A002AE9BC /* DependencyProvider.swift */,
 				900572CE24D319AA002AE9BC /* HasPixbayAppApi.swift */,
 				901DDE3924D43CEF00E4FA0E /* HasUserRepository.swift */,
+				901DDE4624D4734D00E4FA0E /* DisplaysAlert.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -590,6 +602,7 @@
 				9038000B24D32B8F009F9033 /* ValidationType.swift */,
 				9038000C24D32B8F009F9033 /* Validator.swift */,
 				901DDE3224D4392700E4FA0E /* PersistentStorage.swift */,
+				901DDE4424D467D200E4FA0E /* DropdownStyle.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -602,6 +615,7 @@
 				9038007124D34F78009F9033 /* NavigationController.swift */,
 				9038007424D35A60009F9033 /* KeyboardAdjustableScrollView.swift */,
 				903800B924D3FC77009F9033 /* IconLabel.swift */,
+				901DDE3E24D4665300E4FA0E /* DropdownTextField.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -716,6 +730,7 @@
 			children = (
 				9038009224D3D452009F9033 /* ImageModel.swift */,
 				901DDE2B24D435FB00E4FA0E /* User.swift */,
+				901DDE4224D4670D00E4FA0E /* DropDownItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1066,6 +1081,7 @@
 				9038009024D3D1AD009F9033 /* ImageCellViewModel.swift in Sources */,
 				9038001C24D33918009F9033 /* UILabel+Style.swift in Sources */,
 				900572A924D311D9002AE9BC /* RxSwift + URLSession.swift in Sources */,
+				901DDE3F24D4665300E4FA0E /* DropdownTextField.swift in Sources */,
 				9038008D24D3D1A2009F9033 /* ImageTableViewCell.swift in Sources */,
 				900572C924D3191A002AE9BC /* DependencyProvider.swift in Sources */,
 				9038FFF724D32881009F9033 /* OnboardingCoordinatorModuleFactoryType.swift in Sources */,
@@ -1082,7 +1098,8 @@
 				9005729024D31158002AE9BC /* Dispatcher.swift in Sources */,
 				9038001324D333B2009F9033 /* UIColors+AppColors.swift in Sources */,
 				9038000A24D32B81009F9033 /* StoryboardLoadable.swift in Sources */,
-				90BBCE4824D422D2006C2E69 /* Numeric+Extensions.swift in Sources */,
+				901DDE4124D466F900E4FA0E /* Numeric+DropDownItem.swift in Sources */,
+				90BBCE4824D422D2006C2E69 /* Int+Extensions.swift in Sources */,
 				9038001624D33810009F9033 /* TextField.swift in Sources */,
 				9038007524D35A60009F9033 /* KeyboardAdjustableScrollView.swift in Sources */,
 				9038001024D32C0A009F9033 /* UIViewController+Protocols.swift in Sources */,
@@ -1120,6 +1137,7 @@
 				903800AE24D3FA23009F9033 /* ImageDetailsTableViewCell.swift in Sources */,
 				901DDE3C24D43E4400E4FA0E /* CDUser+Extensions.swift in Sources */,
 				9038009B24D3D8F3009F9033 /* NetworkOperation.swift in Sources */,
+				901DDE4524D467D200E4FA0E /* DropdownStyle.swift in Sources */,
 				901DDE3324D4392700E4FA0E /* PersistentStorage.swift in Sources */,
 				903800BA24D3FC77009F9033 /* IconLabel.swift in Sources */,
 				903800B824D3FA96009F9033 /* ImageInteractionsCellViewModel.swift in Sources */,
@@ -1129,6 +1147,7 @@
 				9038007A24D3D10A009F9033 /* HomeCoordinatorOutput.swift in Sources */,
 				900572C224D31861002AE9BC /* RouterType.swift in Sources */,
 				9038FFF324D32869009F9033 /* OnboardingCoordinator.swift in Sources */,
+				901DDE4324D4670D00E4FA0E /* DropDownItem.swift in Sources */,
 				900572C124D31861002AE9BC /* Presentable.swift in Sources */,
 				900572AE24D312CF002AE9BC /* ErrorCode.swift in Sources */,
 				9038008624D3D169009F9033 /* HomeViewController.swift in Sources */,
@@ -1145,6 +1164,7 @@
 				900572C424D31861002AE9BC /* BaseCoordinator.swift in Sources */,
 				901DDE2E24D4365E00E4FA0E /* UserRepository.swift in Sources */,
 				9005729C24D31158002AE9BC /* RequestParameters.swift in Sources */,
+				901DDE4724D4734D00E4FA0E /* DisplaysAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

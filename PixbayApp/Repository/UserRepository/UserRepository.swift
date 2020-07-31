@@ -12,11 +12,10 @@ import CoreData
 struct UserRepository: UserRepositoryType {
     func create(user: User) {
         let coreDataUser = CDUser(context: PersistentStorage.shared.context)
-        coreDataUser.email = user.email
+        coreDataUser.email = user.email?.lowercased()
         coreDataUser.password = user.password?.sha512()
         coreDataUser.age = user.age
         PersistentStorage.shared.saveContext()
-
     }
 
     func get(with email: String) -> User? {

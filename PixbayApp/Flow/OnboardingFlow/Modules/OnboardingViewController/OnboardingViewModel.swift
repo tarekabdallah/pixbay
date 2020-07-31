@@ -16,7 +16,9 @@ class OnboardingViewModel {
     let emailPlaceholderText = "onboarding_scene.placeholder.email_text".localized
     let passwordPlaceholderText = "onboarding_scene.placeholder.password_text".localized
     let registerButtonText = "onboarding_scene.button.register_text".localized
-
+    let errorAlertText = "onboarding_scene.alert.check_email_password_text".localized
+    let emailValidationText = "onboarding_scene.validation.fill_email_text".localized
+    let passwordValidationText = "onboarding_scene.validation.fill_password_text".localized
     let dependencies: Dependencies
     let disposeBag = DisposeBag()
 
@@ -24,9 +26,18 @@ class OnboardingViewModel {
         self.dependencies = dependencies
     }
 
-    func login() {
-        dependencies.userRepository.create(user: User(email: "hello", password: "", age: 0))
-       let user = dependencies.userRepository.get(with: "hello")
-        print(user)
+    func login(email: String, password: String) -> Single<Void> {
+        Single<Void>.create { [weak self] single in
+            guard let user = self?.dependencies.userRepository.get(with: email),
+            user.password == password.sha512() else {
+                let error = NSError(domain: self?.errorAlertText ?? "",
+                                    code: ErrorCode.internal.rawValue,
+                                    userInfo: nil)
+                single(.error(error))
+                return Disposables.create()
+            }
+            single(.success(Void()))
+            return Disposables.create()
+        }
     }
 }

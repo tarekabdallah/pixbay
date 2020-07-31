@@ -11,10 +11,14 @@
 "onboarding_scene.placeholder.email_text" = "Email";
 "onboarding_scene.placeholder.password_text" = "Password";
 "onboarding_scene.button.register_text" = "Register?";
+"onboarding_scene.alert.check_email_password_text" = "Check your email and password.";
+"onboarding_scene.validation.fill_email_text" = "Please enter a valid email";
+"onboarding_scene.validation.fill_password_text" = "Password must be between 6 and 12 chars";
 
 // MARK: - Register Screen
 "register_scene.label.title_text" = "Register";
 "register_scene.placeholder.age_text" = "Age";
+"register_scene.alert.email_exists_text" = "You already have an account!";
 
 // MARK: - Image Details Scene
 "image_details_scene.label.title_text" = "Details";

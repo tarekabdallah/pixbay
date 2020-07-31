@@ -15,7 +15,6 @@ final class PersistentStorage {
     static let shared = PersistentStorage()
 
     // MARK: - Core Data stack
-
     lazy var persistentContainer: NSPersistentContainer = {
 
         let container = NSPersistentContainer(name: "PixbayApp")

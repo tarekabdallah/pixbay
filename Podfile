@@ -14,6 +14,7 @@ def shared_pods
   pod 'netfox'
   pod 'SwiftLint', '~> 0.39.2'
   pod 'CryptoSwift', '~> 1.3.1'
+  pod 'DropDown', '~> 2.3.13'
 end
 
 target 'PixbayApp' do

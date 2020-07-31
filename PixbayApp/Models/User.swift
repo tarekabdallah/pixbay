@@ -12,9 +12,9 @@ import CryptoSwift
 struct User {
     let email: String?
     let password: String?
-    let age: Int16
+    let age: String?
 
-    init(email: String?, password: String?, age: Int16) {
+    init(email: String?, password: String?, age: String?) {
         self.email = email
         self.age = age
         self.password = password
