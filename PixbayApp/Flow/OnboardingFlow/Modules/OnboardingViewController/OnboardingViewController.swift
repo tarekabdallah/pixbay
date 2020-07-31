@@ -67,7 +67,8 @@ private extension OnboardingViewController {
             .asDriver()
             .throttle(.seconds(2))
             .drive(onNext: { [unowned self] in
-                self.loggedInSuccessfully?()
+//                self.loggedInSuccessfully?()
+                self.viewModel.login()
                 }, onCompleted: nil).disposed(by: viewModel.disposeBag)
     }
 

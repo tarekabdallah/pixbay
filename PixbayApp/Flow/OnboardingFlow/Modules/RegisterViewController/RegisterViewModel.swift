@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 class RegisterViewModel {
-    typealias Dependencies = HasPixbayAppApi
+    typealias Dependencies = HasUserRepository
 
     let titleText = "register_scene.label.title_text".localized
     let emailPlaceholderText = "onboarding_scene.placeholder.email_text".localized

@@ -8,13 +8,15 @@
 
 import Foundation
 
-class DependencyProvider: HasPixbayAppApi {
+class DependencyProvider: HasPixbayAppApi, HasUserRepository {
     var pixbayAppApi: PixbayAppApi
+    var userRepository: UserRepositoryType
 
     init() {
         let environment = ProductionEnvironment()
         let networkDispatcher = NetworkDispatcher(environment: environment,
                                                   logger: NetworkLogger())
         pixbayAppApi = PixbayAppApi(dispatcher: networkDispatcher)
+        userRepository = UserRepository()
     }
 }

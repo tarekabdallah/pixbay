@@ -9,7 +9,7 @@
 import UIKit
 
 class OnboardingCoordinator: BaseCoordinator, OnboardingCoordinatorOutput {
-    typealias Dependencies = HasPixbayAppApi
+    typealias Dependencies = HasUserRepository
 
     let dependencies: Dependencies
     let moduleFactory: OnboardingCoordinatorModuleFactoryType

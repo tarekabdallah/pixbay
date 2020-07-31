@@ -1,4 +1,5 @@
 PODS:
+  - CryptoSwift (1.3.1)
   - "Keyboard+LayoutGuide (1.6.0)"
   - Kingfisher (5.14.1):
     - Kingfisher/Core (= 5.14.1)
@@ -17,6 +18,7 @@ PODS:
   - SwiftLint (0.39.2)
 
 DEPENDENCIES:
+  - CryptoSwift
   - "Keyboard+LayoutGuide (~> 1.6.0)"
   - Kingfisher (~> 5.13)
   - netfox
@@ -28,6 +30,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - CryptoSwift
     - "Keyboard+LayoutGuide"
     - Kingfisher
     - netfox
@@ -39,6 +42,7 @@ SPEC REPOS:
     - SwiftLint
 
 SPEC CHECKSUMS:
+  CryptoSwift: f12f037f6d0fcd6d48c96db0071b653de64e6c4d
   "Keyboard+LayoutGuide": db44b1764e2bb5d9824cc9cea9d9006cd4442045
   Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
   netfox: efeec1d23406df6cd605212f09a40957bb5654eb
@@ -49,6 +53,6 @@ SPEC CHECKSUMS:
   SideMenuSwift: c7d99c270e0fad922a14b81f1dcc7a84c764bcd5
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: 15d48630c89f8065c5976e8a79c0dc847f6c4f4c
+PODFILE CHECKSUM: decb304aa78a481b04e9acd63bafe7a206fc2947
 
 COCOAPODS: 1.9.3
