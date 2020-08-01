@@ -63,6 +63,9 @@
 		901DDE4724D4734D00E4FA0E /* DisplaysAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE4624D4734D00E4FA0E /* DisplaysAlert.swift */; };
 		901DDE4924D531CA00E4FA0E /* HasUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE4824D531CA00E4FA0E /* HasUserSettings.swift */; };
 		901DDE4B24D533BD00E4FA0E /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE4A24D533BD00E4FA0E /* ImageButton.swift */; };
+		901DDE4D24D5377200E4FA0E /* UIView+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE4C24D5377200E4FA0E /* UIView+Loader.swift */; };
+		901DDE4F24D537B500E4FA0E /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE4E24D537B500E4FA0E /* Loader.swift */; };
+		901DDE5124D5386100E4FA0E /* LoaderHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE5024D5386100E4FA0E /* LoaderHUD.swift */; };
 		9038000024D328D9009F9033 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038FFFD24D328D9009F9033 /* OnboardingViewModel.swift */; };
 		9038000424D329B0009F9033 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9038000324D329B0009F9033 /* Localizable.strings */; };
 		9038000624D329D8009F9033 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038000524D329D8009F9033 /* String+Localization.swift */; };
@@ -232,6 +235,9 @@
 		901DDE4624D4734D00E4FA0E /* DisplaysAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaysAlert.swift; sourceTree = "<group>"; };
 		901DDE4824D531CA00E4FA0E /* HasUserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasUserSettings.swift; sourceTree = "<group>"; };
 		901DDE4A24D533BD00E4FA0E /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
+		901DDE4C24D5377200E4FA0E /* UIView+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Loader.swift"; sourceTree = "<group>"; };
+		901DDE4E24D537B500E4FA0E /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		901DDE5024D5386100E4FA0E /* LoaderHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderHUD.swift; sourceTree = "<group>"; };
 		9038000324D329B0009F9033 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		9038000524D329D8009F9033 /* String+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		9038000924D32B81009F9033 /* StoryboardLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
@@ -476,6 +482,7 @@
 				90BBCE4724D422D2006C2E69 /* Int+Extensions.swift */,
 				901DDE3B24D43E4400E4FA0E /* CDUser+Extensions.swift */,
 				901DDE4024D466F900E4FA0E /* Numeric+DropDownItem.swift */,
+				901DDE4C24D5377200E4FA0E /* UIView+Loader.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -619,6 +626,8 @@
 				903800B924D3FC77009F9033 /* IconLabel.swift */,
 				901DDE3E24D4665300E4FA0E /* DropdownTextField.swift */,
 				901DDE4A24D533BD00E4FA0E /* ImageButton.swift */,
+				901DDE4E24D537B500E4FA0E /* Loader.swift */,
+				901DDE5024D5386100E4FA0E /* LoaderHUD.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -1086,6 +1095,7 @@
 				901DDE3F24D4665300E4FA0E /* DropdownTextField.swift in Sources */,
 				9038008D24D3D1A2009F9033 /* ImageTableViewCell.swift in Sources */,
 				900572C924D3191A002AE9BC /* DependencyProvider.swift in Sources */,
+				901DDE5124D5386100E4FA0E /* LoaderHUD.swift in Sources */,
 				9038FFF724D32881009F9033 /* OnboardingCoordinatorModuleFactoryType.swift in Sources */,
 				9038001F24D339A3009F9033 /* UIView+Extensions.swift in Sources */,
 				9038FFF424D32869009F9033 /* OnboardingCoordinatorOutput.swift in Sources */,
@@ -1105,6 +1115,7 @@
 				9038001624D33810009F9033 /* TextField.swift in Sources */,
 				9038007524D35A60009F9033 /* KeyboardAdjustableScrollView.swift in Sources */,
 				9038001024D32C0A009F9033 /* UIViewController+Protocols.swift in Sources */,
+				901DDE4F24D537B500E4FA0E /* Loader.swift in Sources */,
 				9038009324D3D452009F9033 /* ImageModel.swift in Sources */,
 				900572D724D31DD4002AE9BC /* UIGestureRecognizer+Extensions.swift in Sources */,
 				900572E224D31EDB002AE9BC /* AppCoordinatorFactory.swift in Sources */,
@@ -1143,6 +1154,7 @@
 				9038009B24D3D8F3009F9033 /* NetworkOperation.swift in Sources */,
 				901DDE4524D467D200E4FA0E /* DropdownStyle.swift in Sources */,
 				901DDE3324D4392700E4FA0E /* PersistentStorage.swift in Sources */,
+				901DDE4D24D5377200E4FA0E /* UIView+Loader.swift in Sources */,
 				903800BA24D3FC77009F9033 /* IconLabel.swift in Sources */,
 				903800B824D3FA96009F9033 /* ImageInteractionsCellViewModel.swift in Sources */,
 				9005729124D31158002AE9BC /* Environment.swift in Sources */,
@@ -1324,6 +1336,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P5MGHMX58K;
 				INFOPLIST_FILE = PixbayApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1343,6 +1356,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P5MGHMX58K;
 				INFOPLIST_FILE = PixbayApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

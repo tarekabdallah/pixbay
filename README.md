@@ -6,7 +6,7 @@ iOS Coding challenge Fetch Data from [Pixbay](https://pixabay.com/).
 
 # Requirements
 * Xcode 11.5
-* iOS 13.5 and above
+* iOS 11 and above
 
 # Setup
 

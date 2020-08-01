@@ -94,9 +94,12 @@ private extension RegisterViewController {
             let password = passwordTextField.text,
             let age = ageTextField.text else { return }
 
+        LoaderHUD.default.startLoader()
         viewModel.createUser(email: email, password: password, age: age).subscribe(onSuccess: { [weak self] in
             self?.registeredSuccessfully?()
+            LoaderHUD.default.stopLoader()
         }, onError: { [weak self] error in
+            LoaderHUD.default.stopLoader()
             self?.showAlert(message: (error as NSError).domain)
         }).disposed(by: viewModel.disposeBag)
     }

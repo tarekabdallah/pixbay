@@ -61,6 +61,47 @@
                                 <rect key="frame" x="0.0" y="110" width="414" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucZ-qO-XMI">
+                                <rect key="frame" x="0.0" y="110" width="414" height="752"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8d-Xu-Rjb">
+                                        <rect key="frame" x="132" y="256" width="150" height="174.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Z5-yt-zUH">
+                                                <rect key="frame" x="0.0" y="154" width="150" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-no-result" translatesAutoresizingMaskIntoConstraints="NO" id="2Rl-yJ-FE5">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                <color key="tintColor" name="darkText"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="2Rl-yJ-FE5" secondAttribute="height" multiplier="1:1" id="9GV-rw-Cse"/>
+                                                    <constraint firstAttribute="height" constant="150" id="hOT-OQ-Lld"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="4Z5-yt-zUH" secondAttribute="bottom" id="C0D-8R-g1h"/>
+                                            <constraint firstItem="2Rl-yJ-FE5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="W8d-Xu-Rjb" secondAttribute="leading" id="M4Y-FC-B5Y"/>
+                                            <constraint firstItem="2Rl-yJ-FE5" firstAttribute="centerX" secondItem="W8d-Xu-Rjb" secondAttribute="centerX" id="RsA-k3-tE0"/>
+                                            <constraint firstItem="4Z5-yt-zUH" firstAttribute="top" secondItem="2Rl-yJ-FE5" secondAttribute="bottom" constant="4" id="VwS-bp-WDb"/>
+                                            <constraint firstItem="2Rl-yJ-FE5" firstAttribute="top" secondItem="W8d-Xu-Rjb" secondAttribute="top" id="Yon-ch-BJH"/>
+                                            <constraint firstAttribute="trailing" secondItem="4Z5-yt-zUH" secondAttribute="trailing" id="lDY-Lp-GPz"/>
+                                            <constraint firstItem="4Z5-yt-zUH" firstAttribute="leading" secondItem="W8d-Xu-Rjb" secondAttribute="leading" id="xF9-21-SjJ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="W8d-Xu-Rjb" secondAttribute="bottom" constant="64" id="RxG-IT-oSj"/>
+                                    <constraint firstItem="W8d-Xu-Rjb" firstAttribute="centerY" secondItem="ucZ-qO-XMI" secondAttribute="centerY" constant="-33" id="S3o-6j-Ip9"/>
+                                    <constraint firstItem="W8d-Xu-Rjb" firstAttribute="centerX" secondItem="ucZ-qO-XMI" secondAttribute="centerX" id="UZy-4E-ipL"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="W8d-Xu-Rjb" secondAttribute="trailing" constant="16" id="wMS-tY-Dg5"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -69,13 +110,19 @@
                             <constraint firstItem="eYg-3R-pgp" firstAttribute="bottom" secondItem="eWt-91-7vp" secondAttribute="bottom" id="3Ae-fX-b8l"/>
                             <constraint firstItem="eYg-3R-pgp" firstAttribute="trailing" secondItem="eWt-91-7vp" secondAttribute="trailing" id="6Zb-zh-amQ"/>
                             <constraint firstItem="eYg-3R-pgp" firstAttribute="trailing" secondItem="Q4l-vu-xep" secondAttribute="trailing" id="Bjv-Uf-xzJ"/>
+                            <constraint firstItem="eYg-3R-pgp" firstAttribute="trailing" secondItem="ucZ-qO-XMI" secondAttribute="trailing" id="LZu-B9-5dn"/>
+                            <constraint firstItem="eYg-3R-pgp" firstAttribute="bottom" secondItem="ucZ-qO-XMI" secondAttribute="bottom" id="M5b-QP-O5k"/>
                             <constraint firstItem="eWt-91-7vp" firstAttribute="leading" secondItem="eYg-3R-pgp" secondAttribute="leading" id="Mnv-0v-mhI"/>
+                            <constraint firstItem="ucZ-qO-XMI" firstAttribute="top" secondItem="Q4l-vu-xep" secondAttribute="bottom" id="Pbb-g5-sC9"/>
                             <constraint firstItem="Q4l-vu-xep" firstAttribute="top" secondItem="eYg-3R-pgp" secondAttribute="top" id="fJO-5A-IPE"/>
+                            <constraint firstItem="ucZ-qO-XMI" firstAttribute="leading" secondItem="eYg-3R-pgp" secondAttribute="leading" id="oc8-fL-aep"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eYg-3R-pgp"/>
                     </view>
                     <connections>
                         <outlet property="logoutButton" destination="CcR-Qs-KJS" id="jCz-JJ-mab"/>
+                        <outlet property="noResultsFoundLabel" destination="4Z5-yt-zUH" id="EMJ-b8-eI7"/>
+                        <outlet property="noResultsView" destination="ucZ-qO-XMI" id="1Tk-ij-NMJ"/>
                         <outlet property="searchFieldContainer" destination="CIj-92-9UG" id="Z0E-2e-yqJ"/>
                         <outlet property="searchTextField" destination="hBl-Sm-BIF" id="a1i-nJ-Jti"/>
                         <outlet property="tableView" destination="eWt-91-7vp" id="bjX-Zp-tQ6"/>
@@ -87,7 +134,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon-no-result" width="48" height="48"/>
         <image name="turn_off" width="53" height="53"/>
+        <namedColor name="darkText">
+            <color red="0.18799999356269836" green="0.20000000298023224" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="primary">
             <color red="0.28200000524520874" green="0.66299998760223389" blue="0.27799999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

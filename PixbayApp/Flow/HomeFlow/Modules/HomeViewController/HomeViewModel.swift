@@ -14,10 +14,12 @@ class HomeViewModel {
     typealias Dependencies = HasPixbayAppApi & HasUserSettings
 
     let searchPlaceholderText = "home_scene.placeholer.search_text".localized
+    let noResultsFoundText = "home_scene.placeholer.no_results_found_text".localized
 
     let dependencies: Dependencies
     let disposeBag = DisposeBag()
     private var currentPage = 1
+
     var fetchedImages = [ImageModel]() {
         didSet {
             displayedImages.accept(fetchedImages)

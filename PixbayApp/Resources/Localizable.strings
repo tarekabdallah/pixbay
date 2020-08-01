@@ -29,3 +29,4 @@
 
 // MARK: - Home Scene
 "home_scene.placeholer.search_text" = "Search";
+"home_scene.placeholer.no_results_found_text" = "No Results were found! Try searching for something else!";

@@ -25,7 +25,7 @@ class ImageTableViewCell: UITableViewCell {
 
     func configure(with viewModel: ImageCellViewModel) {
         self.viewModel = viewModel
-        pixbayImageView.setImage(from: viewModel.image.previewURL, placeHolder: UIImage(systemName: "logo"))
+        pixbayImageView.setImage(from: viewModel.image.previewURL, placeHolder: UIImage(named: "logo"))
         userNameLabel.text = viewModel.image.user.capitalizingFirstLetter
         tagsCollectionView.reloadData()
     }

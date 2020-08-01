@@ -108,9 +108,12 @@ private extension OnboardingViewController {
         guard let email = emailTextField.text,
             let password = passwordTextField.text else { return }
 
+        LoaderHUD.default.startLoader()
         viewModel.login(email: email, password: password).subscribe(onSuccess: { [weak self] in
             self?.loggedInSuccessfully?()
+            LoaderHUD.default.stopLoader()
             }, onError: { [weak self] error in
+                LoaderHUD.default.stopLoader()
                 self?.showAlert(message: (error as NSError).domain)
         }).disposed(by: viewModel.disposeBag)
     }

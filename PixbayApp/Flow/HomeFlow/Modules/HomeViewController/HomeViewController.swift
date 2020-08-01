@@ -16,6 +16,8 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var searchTextField: TextField!
     @IBOutlet private weak var logoutButton: ImageButton!
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var noResultsView: UIView!
+    @IBOutlet private weak var noResultsFoundLabel: UILabel!
 
     var viewModel: HomeViewModel!
     var onImageSelected: ((ImageModel) -> Void)?
@@ -40,7 +42,12 @@ class HomeViewController: UIViewController {
 // MARK: - Private Helper Methods
 private extension HomeViewController {
     func configureViews() {
+        noResultsFoundLabel.applyStyle(textColor: .darkText,
+                                       font: .medium,
+                                       size: .title)
+
         searchTextField.placeholder = viewModel.searchPlaceholderText
+        noResultsFoundLabel.text = viewModel.noResultsFoundText
         setupTableView()
         setupRxComponents()
     }
@@ -72,6 +79,7 @@ private extension HomeViewController {
         tableView.separatorStyle = .none
         viewModel.displayedImages.bind(to: tableView.rx.items(cell: ImageTableViewCell.self)) { _, item, cell in
             cell.configure(with: ImageCellViewModel(image: item))
+            cell.selectionStyle = .none
         }.disposed(by: viewModel.disposeBag)
 
         tableView.rx.modelSelected(ImageModel.self).subscribe(onNext: { [unowned self] imageDetails in
@@ -80,7 +88,13 @@ private extension HomeViewController {
     }
 
     func fetchImages(resetPage: Bool = false) {
+        tableView.showLoader()
         viewModel.fetchImages(with: searchTextField.text,
-                              resetPages: resetPage).subscribe().disposed(by: viewModel.disposeBag)
+                              resetPages: resetPage).subscribe { [weak self] _ in
+                                guard let self = self else { return }
+
+                                self.noResultsView.isHidden = !self.viewModel.fetchedImages.isEmpty
+                                self.tableView.hideLoader()
+        }.disposed(by: viewModel.disposeBag)
     }
 }
