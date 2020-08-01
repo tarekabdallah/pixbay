@@ -20,5 +20,5 @@ target 'PixbayApp' do
 end
 
 target 'PixbayAppTests' do
-
+  shared_pods
 end

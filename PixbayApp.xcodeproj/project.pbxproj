@@ -72,6 +72,7 @@
 		901DDE5F24D563AD00E4FA0E /* OnboardingCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE5E24D563AD00E4FA0E /* OnboardingCoordinatorTests.swift */; };
 		901DDE6224D5691500E4FA0E /* HomeFlowModuleFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE6124D5691500E4FA0E /* HomeFlowModuleFactoryMock.swift */; };
 		901DDE6424D5697D00E4FA0E /* HomeFlowCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE6324D5697D00E4FA0E /* HomeFlowCoordinatorTests.swift */; };
+		901DDE6824D56C2600E4FA0E /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE6724D56C2600E4FA0E /* HomeViewModelTests.swift */; };
 		9038000024D328D9009F9033 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038FFFD24D328D9009F9033 /* OnboardingViewModel.swift */; };
 		9038000424D329B0009F9033 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9038000324D329B0009F9033 /* Localizable.strings */; };
 		9038000624D329D8009F9033 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038000524D329D8009F9033 /* String+Localization.swift */; };
@@ -250,6 +251,7 @@
 		901DDE5E24D563AD00E4FA0E /* OnboardingCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinatorTests.swift; sourceTree = "<group>"; };
 		901DDE6124D5691500E4FA0E /* HomeFlowModuleFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowModuleFactoryMock.swift; sourceTree = "<group>"; };
 		901DDE6324D5697D00E4FA0E /* HomeFlowCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowCoordinatorTests.swift; sourceTree = "<group>"; };
+		901DDE6724D56C2600E4FA0E /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		9038000324D329B0009F9033 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		9038000524D329D8009F9033 /* String+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		9038000924D32B81009F9033 /* StoryboardLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
@@ -620,10 +622,27 @@
 		901DDE6024D5690300E4FA0E /* HomeFlow */ = {
 			isa = PBXGroup;
 			children = (
+				901DDE6524D56C0A00E4FA0E /* Modules */,
 				901DDE6124D5691500E4FA0E /* HomeFlowModuleFactoryMock.swift */,
 				901DDE6324D5697D00E4FA0E /* HomeFlowCoordinatorTests.swift */,
 			);
 			path = HomeFlow;
+			sourceTree = "<group>";
+		};
+		901DDE6524D56C0A00E4FA0E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				901DDE6624D56C1300E4FA0E /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		901DDE6624D56C1300E4FA0E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				901DDE6724D56C2600E4FA0E /* HomeViewModelTests.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		9038000124D328DC009F9033 /* OnboardingViewController */ = {
@@ -921,6 +940,7 @@
 				9005726824D30DAE002AE9BC /* Sources */,
 				9005726924D30DAE002AE9BC /* Frameworks */,
 				9005726A24D30DAE002AE9BC /* Resources */,
+				1B40167725F3E0F68510B003 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1030,6 +1050,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1B40167725F3E0F68510B003 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PixbayAppTests/Pods-PixbayAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PixbayAppTests/Pods-PixbayAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PixbayAppTests/Pods-PixbayAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		89B113DB807E97B6C18B568E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1234,6 +1271,7 @@
 				901DDE5F24D563AD00E4FA0E /* OnboardingCoordinatorTests.swift in Sources */,
 				901DDE5924D55CD500E4FA0E /* RouterMock.swift in Sources */,
 				901DDE5724D55C7800E4FA0E /* AppCoordinatorTests.swift in Sources */,
+				901DDE6824D56C2600E4FA0E /* HomeViewModelTests.swift in Sources */,
 				901DDE6224D5691500E4FA0E /* HomeFlowModuleFactoryMock.swift in Sources */,
 				901DDE5524D55A7B00E4FA0E /* AppFlowCoordinatorMock.swift in Sources */,
 				901DDE6424D5697D00E4FA0E /* HomeFlowCoordinatorTests.swift in Sources */,
