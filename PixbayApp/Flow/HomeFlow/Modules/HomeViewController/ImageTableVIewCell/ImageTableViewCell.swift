@@ -39,12 +39,13 @@ private extension ImageTableViewCell {
         if let flowLayout = tagsCollectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
             flowLayout.minimumInteritemSpacing = 8
+            flowLayout.minimumLineSpacing = 8
         }
         tagsCollectionView.dataSource = self
     }
 }
 
-// MARK: - UICollectionViewDataSource
+// MARK: - UICollectionViewDataS = 8ource
 extension ImageTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {

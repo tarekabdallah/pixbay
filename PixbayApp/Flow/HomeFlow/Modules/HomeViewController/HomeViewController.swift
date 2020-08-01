@@ -21,6 +21,7 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var noResultsFoundLabel: UILabel!
 
     private let spinner = UIActivityIndicatorView(style: .gray)
+    private let refreshControl = UIRefreshControl()
 
     var viewModel: HomeViewModel!
     var onImageSelected: ((ImageModel) -> Void)?
@@ -54,6 +55,7 @@ private extension HomeViewController {
         setupRxComponents()
         setupSpinner()
         setupPagination()
+        setupRefreshControl()
 
         // This dispatch queue is added as a workaround for the issue on
         // https://github.com/RxSwiftCommunity/RxDataSources/issues/331
@@ -61,6 +63,19 @@ private extension HomeViewController {
         DispatchQueue.main.async { [weak self] in
             self?.setupTableView()
         }
+    }
+
+    func setupRefreshControl() {
+        refreshControl.tintColor = .primary
+        tableView.refreshControl = refreshControl
+
+        refreshControl
+            .rx
+            .controlEvent([.valueChanged])
+                    .asDriver()
+        .drive(onNext: { [unowned self] in
+        self.fetchImages(resetPage: true)
+        }, onCompleted: nil, onDisposed: nil).disposed(by: viewModel.disposeBag)
     }
 
     func setupPagination() {
@@ -82,7 +97,7 @@ private extension HomeViewController {
     func setupRxComponents() {
         searchTextField
             .rx
-            .controlEvent([.editingChanged])
+            .controlEvent([.editingChanged, .editingDidEndOnExit])
             .asDriver()
             .debounce(.milliseconds(500))
             .drive(onNext: { [unowned self] in
@@ -114,19 +129,25 @@ private extension HomeViewController {
             }, onError: nil).disposed(by: viewModel.disposeBag)
     }
 
+    func endAllLoadingIndicators() {
+        refreshControl.endRefreshing()
+        tableView.hideLoader()
+        spinner.stopAnimating()
+    }
+
     func fetchImages(resetPage: Bool = false) {
-        if resetPage {
+        if resetPage && !refreshControl.isRefreshing {
             tableView.showLoader()
-        } else {
+        } else if !refreshControl.isRefreshing {
             spinner.startAnimating()
         }
+
         viewModel.fetchImages(with: searchTextField.text,
                               resetPages: resetPage).subscribe { [weak self] _ in
                                 guard let self = self else { return }
 
                                 self.noResultsView.isHidden = !self.viewModel.fetchedImages.isEmpty
-                                self.tableView.hideLoader()
-                                self.spinner.stopAnimating()
+                                self.endAllLoadingIndicators()
         }.disposed(by: viewModel.disposeBag)
     }
 

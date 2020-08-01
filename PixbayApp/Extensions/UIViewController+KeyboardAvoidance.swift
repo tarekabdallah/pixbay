@@ -17,7 +17,8 @@ extension UIViewController {
 
     @objc
     func dismissKeyboard(_ sender: UITapGestureRecognizer) {
-        if !didTouchInsideTextField(fromView: view, gesture: sender) {
+        if !didTouchInside(viewType: UITextField.self, fromView: view, gesture: sender),
+            !didTouchInside(viewType: UIButton.self, fromView: view, gesture: sender) {
             view.endEditing(true)
         }
     }
@@ -44,13 +45,15 @@ private extension UIViewController {
         hideKeyboardWhenTappedAround()
     }
 
-    func didTouchInsideTextField(fromView currentView: UIView, gesture: UITapGestureRecognizer) -> Bool {
+    func didTouchInside<T: UIView>(viewType: T.Type,
+                                   fromView currentView: UIView,
+                                   gesture: UITapGestureRecognizer) -> Bool {
         var returnValue = false
         for subview in currentView.subviews {
-            if subview is UITextField, gesture.isTouchInside(subview) {
+            if subview is T, gesture.isTouchInside(subview) {
                 return true
             } else {
-                returnValue = returnValue || didTouchInsideTextField(fromView: subview, gesture: gesture)
+                returnValue = returnValue || didTouchInside(viewType: viewType, fromView: subview, gesture: gesture)
             }
         }
         return returnValue
