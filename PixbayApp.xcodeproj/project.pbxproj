@@ -61,6 +61,8 @@
 		901DDE4324D4670D00E4FA0E /* DropDownItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE4224D4670D00E4FA0E /* DropDownItem.swift */; };
 		901DDE4524D467D200E4FA0E /* DropdownStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE4424D467D200E4FA0E /* DropdownStyle.swift */; };
 		901DDE4724D4734D00E4FA0E /* DisplaysAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE4624D4734D00E4FA0E /* DisplaysAlert.swift */; };
+		901DDE4924D531CA00E4FA0E /* HasUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE4824D531CA00E4FA0E /* HasUserSettings.swift */; };
+		901DDE4B24D533BD00E4FA0E /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE4A24D533BD00E4FA0E /* ImageButton.swift */; };
 		9038000024D328D9009F9033 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038FFFD24D328D9009F9033 /* OnboardingViewModel.swift */; };
 		9038000424D329B0009F9033 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9038000324D329B0009F9033 /* Localizable.strings */; };
 		9038000624D329D8009F9033 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038000524D329D8009F9033 /* String+Localization.swift */; };
@@ -228,6 +230,8 @@
 		901DDE4224D4670D00E4FA0E /* DropDownItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownItem.swift; sourceTree = "<group>"; };
 		901DDE4424D467D200E4FA0E /* DropdownStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownStyle.swift; sourceTree = "<group>"; };
 		901DDE4624D4734D00E4FA0E /* DisplaysAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaysAlert.swift; sourceTree = "<group>"; };
+		901DDE4824D531CA00E4FA0E /* HasUserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasUserSettings.swift; sourceTree = "<group>"; };
+		901DDE4A24D533BD00E4FA0E /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
 		9038000324D329B0009F9033 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		9038000524D329D8009F9033 /* String+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		9038000924D32B81009F9033 /* StoryboardLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
@@ -506,6 +510,7 @@
 				900572CE24D319AA002AE9BC /* HasPixbayAppApi.swift */,
 				901DDE3924D43CEF00E4FA0E /* HasUserRepository.swift */,
 				901DDE4624D4734D00E4FA0E /* DisplaysAlert.swift */,
+				901DDE4824D531CA00E4FA0E /* HasUserSettings.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -613,6 +618,7 @@
 				9038007424D35A60009F9033 /* KeyboardAdjustableScrollView.swift */,
 				903800B924D3FC77009F9033 /* IconLabel.swift */,
 				901DDE3E24D4665300E4FA0E /* DropdownTextField.swift */,
+				901DDE4A24D533BD00E4FA0E /* ImageButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -1125,7 +1131,9 @@
 				903800B124D3FA2E009F9033 /* ImageDetailsCellViewModel.swift in Sources */,
 				900572D224D31A1E002AE9BC /* BaseEnvironment.swift in Sources */,
 				900572A824D311D9002AE9BC /* Reachability.swift in Sources */,
+				901DDE4B24D533BD00E4FA0E /* ImageButton.swift in Sources */,
 				9038FFF924D32887009F9033 /* OnboardingCoordinatorModuleFactory.swift in Sources */,
+				901DDE4924D531CA00E4FA0E /* HasUserSettings.swift in Sources */,
 				9005728F24D31158002AE9BC /* ResponseHandler.swift in Sources */,
 				9038007224D34F78009F9033 /* NavigationController.swift in Sources */,
 				9038001A24D338B4009F9033 /* UITextField+Style.swift in Sources */,

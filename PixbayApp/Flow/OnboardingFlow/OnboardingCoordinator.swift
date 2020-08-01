@@ -9,7 +9,7 @@
 import UIKit
 
 class OnboardingCoordinator: BaseCoordinator, OnboardingCoordinatorOutput {
-    typealias Dependencies = HasUserRepository
+    typealias Dependencies = HasUserRepository & HasUserSettings
 
     let dependencies: Dependencies
     let moduleFactory: OnboardingCoordinatorModuleFactoryType

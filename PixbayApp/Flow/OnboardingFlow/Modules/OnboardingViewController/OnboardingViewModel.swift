@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 class OnboardingViewModel {
-    typealias Dependencies = HasUserRepository
+    typealias Dependencies = HasUserRepository & HasUserSettings
 
     let loginButtonText = "onboarding_scene.button.login_text".localized
     let emailPlaceholderText = "onboarding_scene.placeholder.email_text".localized
@@ -36,6 +36,7 @@ class OnboardingViewModel {
                 single(.error(error))
                 return Disposables.create()
             }
+            self?.dependencies.userSettings.setUser(user)
             single(.success(Void()))
             return Disposables.create()
         }

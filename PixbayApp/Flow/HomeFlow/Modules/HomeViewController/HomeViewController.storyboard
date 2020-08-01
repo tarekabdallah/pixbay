@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,19 +23,35 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hBl-Sm-BIF" customClass="TextField" customModule="PixbayApp" customModuleProvider="target">
-                                                <rect key="frame" x="32" y="8" width="350" height="50"/>
+                                                <rect key="frame" x="74" y="8" width="308" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="AV2-Xz-NAW"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcR-Qs-KJS" customClass="ImageButton" customModule="PixbayApp" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="8" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="CcR-Qs-KJS" secondAttribute="height" multiplier="1:1" id="reN-Wg-G6p"/>
+                                                </constraints>
+                                                <color key="tintColor" name="primary"/>
+                                                <state key="normal" image="turn_off"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="edgeInsets">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="hBl-Sm-BIF" firstAttribute="leading" secondItem="CIj-92-9UG" secondAttribute="leading" constant="32" id="2LE-MX-Xbh"/>
+                                            <constraint firstItem="CcR-Qs-KJS" firstAttribute="top" secondItem="hBl-Sm-BIF" secondAttribute="top" id="6ud-4z-oEV"/>
                                             <constraint firstAttribute="bottom" secondItem="hBl-Sm-BIF" secondAttribute="bottom" constant="8" id="Arl-ol-EQj"/>
+                                            <constraint firstItem="CcR-Qs-KJS" firstAttribute="bottom" secondItem="hBl-Sm-BIF" secondAttribute="bottom" id="F6b-kx-4PS"/>
+                                            <constraint firstItem="hBl-Sm-BIF" firstAttribute="leading" secondItem="CcR-Qs-KJS" secondAttribute="trailing" constant="8" id="Hyg-uy-eNs"/>
                                             <constraint firstAttribute="trailing" secondItem="hBl-Sm-BIF" secondAttribute="trailing" constant="32" id="QQJ-JD-vCX"/>
+                                            <constraint firstItem="CcR-Qs-KJS" firstAttribute="leading" secondItem="CIj-92-9UG" secondAttribute="leading" constant="16" id="nWj-Cb-jZc"/>
                                             <constraint firstItem="hBl-Sm-BIF" firstAttribute="top" secondItem="CIj-92-9UG" secondAttribute="top" constant="8" id="qcV-sF-xs2"/>
                                         </constraints>
                                     </view>
@@ -58,6 +75,7 @@
                         <viewLayoutGuide key="safeArea" id="eYg-3R-pgp"/>
                     </view>
                     <connections>
+                        <outlet property="logoutButton" destination="CcR-Qs-KJS" id="jCz-JJ-mab"/>
                         <outlet property="searchFieldContainer" destination="CIj-92-9UG" id="Z0E-2e-yqJ"/>
                         <outlet property="searchTextField" destination="hBl-Sm-BIF" id="a1i-nJ-Jti"/>
                         <outlet property="tableView" destination="eWt-91-7vp" id="bjX-Zp-tQ6"/>
@@ -65,7 +83,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Eh-L1-vKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="turn_off" width="53" height="53"/>
+        <namedColor name="primary">
+            <color red="0.28200000524520874" green="0.66299998760223389" blue="0.27799999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

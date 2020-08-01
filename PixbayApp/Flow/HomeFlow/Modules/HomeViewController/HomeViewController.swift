@@ -14,10 +14,12 @@ class HomeViewController: UIViewController {
 
     @IBOutlet private weak var searchFieldContainer: UIView!
     @IBOutlet private weak var searchTextField: TextField!
+    @IBOutlet private weak var logoutButton: ImageButton!
     @IBOutlet private weak var tableView: UITableView!
 
     var viewModel: HomeViewModel!
     var onImageSelected: ((ImageModel) -> Void)?
+    var onLogout: (() -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,15 +41,30 @@ class HomeViewController: UIViewController {
 private extension HomeViewController {
     func configureViews() {
         searchTextField.placeholder = viewModel.searchPlaceholderText
+        setupTableView()
+        setupRxComponents()
+    }
+
+    func setupRxComponents() {
         searchTextField
             .rx
             .controlEvent([.editingChanged])
             .asDriver()
-            .throttle(.seconds(2))
+            .debounce(.milliseconds(500))
             .drive(onNext: { [unowned self] in
                 self.fetchImages(resetPage: true)
                 }, onCompleted: nil, onDisposed: nil).disposed(by: viewModel.disposeBag)
-        setupTableView()
+
+        logoutButton
+            .rx
+            .tap
+            .asDriver()
+            .throttle(.seconds(2))
+            .drive(onNext: { [unowned self] in
+                self.viewModel.clearUser()
+                self.onLogout?()
+                }, onCompleted: nil, onDisposed: nil).disposed(by: viewModel.disposeBag)
+
     }
 
     func setupTableView() {
@@ -59,7 +76,7 @@ private extension HomeViewController {
 
         tableView.rx.modelSelected(ImageModel.self).subscribe(onNext: { [unowned self] imageDetails in
             self.onImageSelected?(imageDetails)
-        }, onError: nil).disposed(by: viewModel.disposeBag)
+            }, onError: nil).disposed(by: viewModel.disposeBag)
     }
 
     func fetchImages(resetPage: Bool = false) {

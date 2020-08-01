@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 class RegisterViewModel {
-    typealias Dependencies = HasUserRepository
+    typealias Dependencies = HasUserRepository & HasUserSettings
 
     let titleText = "register_scene.label.title_text".localized
     let emailPlaceholderText = "onboarding_scene.placeholder.email_text".localized
@@ -36,9 +36,11 @@ class RegisterViewModel {
                 single(.error(error))
                 return Disposables.create()
             }
-            self?.dependencies.userRepository.create(user: User(email: email,
-                                                                password: password,
-                                                                age: age))
+
+            let user = User(email: email, password: password, age: age)
+            self?.dependencies.userRepository.create(user: user)
+            self?.dependencies.userSettings.setUser(user)
+
             single(.success(Void()))
             return Disposables.create()
         }

@@ -11,7 +11,7 @@ import RxCocoa
 import RxSwift
 
 class HomeViewModel {
-    typealias Dependencies = HasPixbayAppApi
+    typealias Dependencies = HasPixbayAppApi & HasUserSettings
 
     let searchPlaceholderText = "home_scene.placeholer.search_text".localized
 
@@ -47,5 +47,9 @@ class HomeViewModel {
                             }
                             return
             }
+    }
+
+    func clearUser() {
+        dependencies.userSettings.clear()
     }
 }

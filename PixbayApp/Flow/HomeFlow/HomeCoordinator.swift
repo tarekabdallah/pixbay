@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeCoordinator: BaseCoordinator, HomeCoordinatorOutput {
-    typealias Dependencies = HasPixbayAppApi
+    typealias Dependencies = HasPixbayAppApi & HasUserSettings
 
     let dependencies: Dependencies
     let moduleFactory: HomeCoordinatorModuleFactoryType
@@ -19,6 +19,9 @@ class HomeCoordinator: BaseCoordinator, HomeCoordinatorOutput {
         let homeViewController = moduleFactory.makeHomeViewController(dependencies: dependencies)
         homeViewController.onImageSelected = { [unowned self] imageDetails in
             self.showImageDetailsViewController(imageDetails: imageDetails)
+        }
+        homeViewController.onLogout = { [unowned self] in
+            self.finishFlow?()
         }
         return homeViewController
     }()

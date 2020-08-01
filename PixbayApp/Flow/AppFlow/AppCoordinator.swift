@@ -21,7 +21,11 @@ class AppCoordinator: BaseCoordinator {
     }
 
     override func start() {
-        runOnboardingFlow()
+        if dependencyProvider.userSettings.isLoggedIn {
+            runMainFlow()
+        } else {
+            runOnboardingFlow()
+        }
     }
 
     override func toPresent() -> UIViewController {
