@@ -32,6 +32,11 @@ extension UITableView {
     func dequeueReusableCell<Cell: UITableViewCell>(cell: Cell.Type) -> Cell {
         dequeueReusableCell(withIdentifier: cell.id) as! Cell
     }
+
+    var isNearTheBottomEdge: Bool {
+        let startLoadingOffset: CGFloat = 20.0
+        return contentOffset.y + frame.size.height + startLoadingOffset > contentSize.height
+    }
 }
 
 // MARK: - Private Computed Variables

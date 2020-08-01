@@ -34,6 +34,15 @@ private extension ImageDetailsViewController {
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
 
+        // This dispatch queue is added as a workaround for the issue on
+        // https://github.com/RxSwiftCommunity/RxDataSources/issues/331
+        // should be removed on next release of RXSwift
+        DispatchQueue.main.async { [weak self] in
+            self?.setupTableView()
+        }
+    }
+
+    func setupTableView() {
         viewModel.sections.bind(to: tableView.rx.items) { [unowned self] tableView, index, type in
             let indexPath = IndexPath(row: index, section: 0)
             return self.makeTableViewCell(for: tableView, with: type, indexPath: indexPath)

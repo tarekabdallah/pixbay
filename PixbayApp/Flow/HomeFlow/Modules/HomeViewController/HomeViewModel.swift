@@ -18,7 +18,11 @@ class HomeViewModel {
 
     let dependencies: Dependencies
     let disposeBag = DisposeBag()
-    private var currentPage = 1
+    var currentPage = 1
+
+    var reachedLastPage: Bool {
+        currentPage == Constants.apiMaxPages
+    }
 
     var fetchedImages = [ImageModel]() {
         didSet {

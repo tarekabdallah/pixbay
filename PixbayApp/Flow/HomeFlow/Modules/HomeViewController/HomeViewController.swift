@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 import RxSwift
+import RxCocoa
 
 class HomeViewController: UIViewController {
 
@@ -18,6 +19,8 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var noResultsView: UIView!
     @IBOutlet private weak var noResultsFoundLabel: UILabel!
+
+    private let spinner = UIActivityIndicatorView(style: .gray)
 
     var viewModel: HomeViewModel!
     var onImageSelected: ((ImageModel) -> Void)?
@@ -29,7 +32,7 @@ class HomeViewController: UIViewController {
         assert(viewModel != nil, "viewModel must be set")
 
         configureViews()
-        fetchImages()
+        fetchImages(resetPage: true)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -48,8 +51,32 @@ private extension HomeViewController {
 
         searchTextField.placeholder = viewModel.searchPlaceholderText
         noResultsFoundLabel.text = viewModel.noResultsFoundText
-        setupTableView()
         setupRxComponents()
+        setupSpinner()
+        setupPagination()
+
+        // This dispatch queue is added as a workaround for the issue on
+        // https://github.com/RxSwiftCommunity/RxDataSources/issues/331
+        // should be removed on next release of RXSwift
+        DispatchQueue.main.async { [weak self] in
+            self?.setupTableView()
+        }
+    }
+
+    func setupPagination() {
+        tableView
+            .rx
+            .contentOffset
+            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
+            .map { [unowned self] _ in
+                return self.tableView.isNearTheBottomEdge
+                    && !self.viewModel.reachedLastPage
+                    && self.viewModel.currentPage != 1
+            }.subscribe(onNext: { [unowned self] shouldLoadNextPage in
+                if shouldLoadNextPage {
+                    self.fetchImages()
+                }
+            }, onError: nil).disposed(by: viewModel.disposeBag)
     }
 
     func setupRxComponents() {
@@ -88,13 +115,26 @@ private extension HomeViewController {
     }
 
     func fetchImages(resetPage: Bool = false) {
-        tableView.showLoader()
+        if resetPage {
+            tableView.showLoader()
+        } else {
+            spinner.startAnimating()
+        }
         viewModel.fetchImages(with: searchTextField.text,
                               resetPages: resetPage).subscribe { [weak self] _ in
                                 guard let self = self else { return }
 
                                 self.noResultsView.isHidden = !self.viewModel.fetchedImages.isEmpty
                                 self.tableView.hideLoader()
+                                self.spinner.stopAnimating()
         }.disposed(by: viewModel.disposeBag)
+    }
+
+    func setupSpinner() {
+        spinner.color = .primary
+        spinner.frame.size.height = 60
+        spinner.stopAnimating()
+        spinner.hidesWhenStopped = true
+        tableView.tableFooterView = spinner
     }
 }
