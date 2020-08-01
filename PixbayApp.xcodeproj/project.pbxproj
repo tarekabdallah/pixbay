@@ -11,7 +11,6 @@
 		9005725A24D30DAD002AE9BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005725924D30DAD002AE9BC /* AppDelegate.swift */; };
 		9005726324D30DAE002AE9BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9005726224D30DAE002AE9BC /* Assets.xcassets */; };
 		9005726624D30DAE002AE9BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9005726424D30DAE002AE9BC /* LaunchScreen.storyboard */; };
-		9005727124D30DAE002AE9BC /* PixbayAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005727024D30DAE002AE9BC /* PixbayAppTests.swift */; };
 		9005728F24D31158002AE9BC /* ResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005727C24D31158002AE9BC /* ResponseHandler.swift */; };
 		9005729024D31158002AE9BC /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005727D24D31158002AE9BC /* Dispatcher.swift */; };
 		9005729124D31158002AE9BC /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9005727E24D31158002AE9BC /* Environment.swift */; };
@@ -66,6 +65,13 @@
 		901DDE4D24D5377200E4FA0E /* UIView+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE4C24D5377200E4FA0E /* UIView+Loader.swift */; };
 		901DDE4F24D537B500E4FA0E /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE4E24D537B500E4FA0E /* Loader.swift */; };
 		901DDE5124D5386100E4FA0E /* LoaderHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE5024D5386100E4FA0E /* LoaderHUD.swift */; };
+		901DDE5524D55A7B00E4FA0E /* AppFlowCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE5424D55A7B00E4FA0E /* AppFlowCoordinatorMock.swift */; };
+		901DDE5724D55C7800E4FA0E /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE5624D55C7800E4FA0E /* AppCoordinatorTests.swift */; };
+		901DDE5924D55CD500E4FA0E /* RouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE5824D55CD500E4FA0E /* RouterMock.swift */; };
+		901DDE5D24D5631000E4FA0E /* OnboardingFlowModuleFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE5C24D5631000E4FA0E /* OnboardingFlowModuleFactoryMock.swift */; };
+		901DDE5F24D563AD00E4FA0E /* OnboardingCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE5E24D563AD00E4FA0E /* OnboardingCoordinatorTests.swift */; };
+		901DDE6224D5691500E4FA0E /* HomeFlowModuleFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE6124D5691500E4FA0E /* HomeFlowModuleFactoryMock.swift */; };
+		901DDE6424D5697D00E4FA0E /* HomeFlowCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DDE6324D5697D00E4FA0E /* HomeFlowCoordinatorTests.swift */; };
 		9038000024D328D9009F9033 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038FFFD24D328D9009F9033 /* OnboardingViewModel.swift */; };
 		9038000424D329B0009F9033 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9038000324D329B0009F9033 /* Localizable.strings */; };
 		9038000624D329D8009F9033 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038000524D329D8009F9033 /* String+Localization.swift */; };
@@ -182,7 +188,6 @@
 		9005726524D30DAE002AE9BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9005726724D30DAE002AE9BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9005726C24D30DAE002AE9BC /* PixbayAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixbayAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9005727024D30DAE002AE9BC /* PixbayAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixbayAppTests.swift; sourceTree = "<group>"; };
 		9005727224D30DAE002AE9BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9005727C24D31158002AE9BC /* ResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseHandler.swift; sourceTree = "<group>"; };
 		9005727D24D31158002AE9BC /* Dispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
@@ -238,6 +243,13 @@
 		901DDE4C24D5377200E4FA0E /* UIView+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Loader.swift"; sourceTree = "<group>"; };
 		901DDE4E24D537B500E4FA0E /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		901DDE5024D5386100E4FA0E /* LoaderHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderHUD.swift; sourceTree = "<group>"; };
+		901DDE5424D55A7B00E4FA0E /* AppFlowCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinatorMock.swift; sourceTree = "<group>"; };
+		901DDE5624D55C7800E4FA0E /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
+		901DDE5824D55CD500E4FA0E /* RouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterMock.swift; sourceTree = "<group>"; };
+		901DDE5C24D5631000E4FA0E /* OnboardingFlowModuleFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlowModuleFactoryMock.swift; sourceTree = "<group>"; };
+		901DDE5E24D563AD00E4FA0E /* OnboardingCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinatorTests.swift; sourceTree = "<group>"; };
+		901DDE6124D5691500E4FA0E /* HomeFlowModuleFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowModuleFactoryMock.swift; sourceTree = "<group>"; };
+		901DDE6324D5697D00E4FA0E /* HomeFlowCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowCoordinatorTests.swift; sourceTree = "<group>"; };
 		9038000324D329B0009F9033 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		9038000524D329D8009F9033 /* String+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		9038000924D32B81009F9033 /* StoryboardLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
@@ -401,8 +413,11 @@
 		9005726F24D30DAE002AE9BC /* PixbayAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				9005727024D30DAE002AE9BC /* PixbayAppTests.swift */,
+				901DDE6024D5690300E4FA0E /* HomeFlow */,
+				901DDE5A24D562CB00E4FA0E /* OnboardingFlow */,
+				901DDE5324D55A5100E4FA0E /* AppFlow */,
 				9005727224D30DAE002AE9BC /* Info.plist */,
+				901DDE5824D55CD500E4FA0E /* RouterMock.swift */,
 			);
 			path = PixbayAppTests;
 			sourceTree = "<group>";
@@ -582,6 +597,33 @@
 				901DDE2D24D4365E00E4FA0E /* UserRepository.swift */,
 			);
 			path = UserRepository;
+			sourceTree = "<group>";
+		};
+		901DDE5324D55A5100E4FA0E /* AppFlow */ = {
+			isa = PBXGroup;
+			children = (
+				901DDE5424D55A7B00E4FA0E /* AppFlowCoordinatorMock.swift */,
+				901DDE5624D55C7800E4FA0E /* AppCoordinatorTests.swift */,
+			);
+			path = AppFlow;
+			sourceTree = "<group>";
+		};
+		901DDE5A24D562CB00E4FA0E /* OnboardingFlow */ = {
+			isa = PBXGroup;
+			children = (
+				901DDE5C24D5631000E4FA0E /* OnboardingFlowModuleFactoryMock.swift */,
+				901DDE5E24D563AD00E4FA0E /* OnboardingCoordinatorTests.swift */,
+			);
+			path = OnboardingFlow;
+			sourceTree = "<group>";
+		};
+		901DDE6024D5690300E4FA0E /* HomeFlow */ = {
+			isa = PBXGroup;
+			children = (
+				901DDE6124D5691500E4FA0E /* HomeFlowModuleFactoryMock.swift */,
+				901DDE6324D5697D00E4FA0E /* HomeFlowCoordinatorTests.swift */,
+			);
+			path = HomeFlow;
 			sourceTree = "<group>";
 		};
 		9038000124D328DC009F9033 /* OnboardingViewController */ = {
@@ -905,6 +947,7 @@
 					};
 					9005726B24D30DAE002AE9BC = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 						TestTargetID = 9005725524D30DAD002AE9BC;
 					};
 				};
@@ -1188,7 +1231,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9005727124D30DAE002AE9BC /* PixbayAppTests.swift in Sources */,
+				901DDE5F24D563AD00E4FA0E /* OnboardingCoordinatorTests.swift in Sources */,
+				901DDE5924D55CD500E4FA0E /* RouterMock.swift in Sources */,
+				901DDE5724D55C7800E4FA0E /* AppCoordinatorTests.swift in Sources */,
+				901DDE6224D5691500E4FA0E /* HomeFlowModuleFactoryMock.swift in Sources */,
+				901DDE5524D55A7B00E4FA0E /* AppFlowCoordinatorMock.swift in Sources */,
+				901DDE6424D5697D00E4FA0E /* HomeFlowCoordinatorTests.swift in Sources */,
+				901DDE5D24D5631000E4FA0E /* OnboardingFlowModuleFactoryMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1374,6 +1423,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P5MGHMX58K;
 				INFOPLIST_FILE = PixbayAppTests/Info.plist;
@@ -1385,6 +1435,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.tarek.demo.PixbayAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PixbayApp.app/PixbayApp";
@@ -1397,6 +1448,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P5MGHMX58K;
 				INFOPLIST_FILE = PixbayAppTests/Info.plist;

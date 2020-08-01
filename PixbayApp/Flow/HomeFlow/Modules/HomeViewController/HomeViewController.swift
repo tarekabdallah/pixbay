@@ -67,7 +67,7 @@ private extension HomeViewController {
         tableView
             .rx
             .contentOffset
-            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
+            .debounce(.milliseconds(50), scheduler: MainScheduler.instance)
             .map { [unowned self] _ in
                 return self.tableView.isNearTheBottomEdge
                     && !self.viewModel.reachedLastPage
