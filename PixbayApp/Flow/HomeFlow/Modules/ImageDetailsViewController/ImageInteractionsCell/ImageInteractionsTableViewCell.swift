@@ -48,11 +48,5 @@ private extension ImageInteractionsTableViewCell {
         numberOfLikes.icon = UIImage(named: InteractionImage.like.rawValue)
         numberOfComments.icon = UIImage(named: InteractionImage.comment.rawValue)
         numberOfFavorites.icon = UIImage(named: InteractionImage.favorite.rawValue)
-
-        numberOfDownloads.tintColor = .darkText
-        numberOfViews.tintColor = .darkText
-        numberOfLikes.tintColor = .darkText
-        numberOfComments.tintColor = .darkText
-        numberOfFavorites.tintColor = .darkText
     }
 }

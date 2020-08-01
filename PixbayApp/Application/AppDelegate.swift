@@ -27,16 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIViewController.swizzleViewDidLoad()
 
         appCoordinator.start()
-
-        initialiseServices(application: application, launchOptions: launchOptions)
         return true
-    }
-}
-
-// MARK: - Private helper methods
-private extension AppDelegate {
-    func initialiseServices(application: UIApplication,
-                            launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
-        NetfoxService.initialise()
     }
 }

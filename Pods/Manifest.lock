@@ -5,7 +5,6 @@ PODS:
   - Kingfisher (5.14.1):
     - Kingfisher/Core (= 5.14.1)
   - Kingfisher/Core (5.14.1)
-  - netfox (1.19.0)
   - NVActivityIndicatorView (4.8.0):
     - NVActivityIndicatorView/Presenter (= 4.8.0)
   - NVActivityIndicatorView/Presenter (4.8.0)
@@ -15,7 +14,6 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
-  - SideMenuSwift (2.0.5)
   - SwiftLint (0.39.2)
 
 DEPENDENCIES:
@@ -23,11 +21,9 @@ DEPENDENCIES:
   - DropDown (~> 2.3.13)
   - "Keyboard+LayoutGuide (~> 1.6.0)"
   - Kingfisher (~> 5.13)
-  - netfox
   - NVActivityIndicatorView (~> 4.8.0)
-  - RxCocoa (~> 5)
-  - RxSwift (~> 5)
-  - SideMenuSwift (~> 2)
+  - RxCocoa (~> 5.1.1)
+  - RxSwift (~> 5.1.1)
   - SwiftLint (~> 0.39.2)
 
 SPEC REPOS:
@@ -36,12 +32,10 @@ SPEC REPOS:
     - DropDown
     - "Keyboard+LayoutGuide"
     - Kingfisher
-    - netfox
     - NVActivityIndicatorView
     - RxCocoa
     - RxRelay
     - RxSwift
-    - SideMenuSwift
     - SwiftLint
 
 SPEC CHECKSUMS:
@@ -49,14 +43,12 @@ SPEC CHECKSUMS:
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   "Keyboard+LayoutGuide": db44b1764e2bb5d9824cc9cea9d9006cd4442045
   Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
-  netfox: efeec1d23406df6cd605212f09a40957bb5654eb
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
-  SideMenuSwift: c7d99c270e0fad922a14b81f1dcc7a84c764bcd5
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: a8d158005f0bc75a45a0b5cac505a0ebf80d790e
+PODFILE CHECKSUM: ed2de1ffcc77e6f41e4c66ab788e8b407cce5d1b
 
 COCOAPODS: 1.9.3

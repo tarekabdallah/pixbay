@@ -13,10 +13,13 @@ import RxSwift
 class ImageDetailsViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
+
     var viewModel: ImageDetailsViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        assert(viewModel != nil, "viewModel must be set")
 
         configureViews()
     }
@@ -33,17 +36,23 @@ private extension ImageDetailsViewController {
 
         viewModel.sections.bind(to: tableView.rx.items) { [unowned self] tableView, index, type in
             let indexPath = IndexPath(row: index, section: 0)
-            switch type {
-            case .imageDetails:
-                let cell = tableView.dequeueReusableCell(cell: ImageDetailsTableViewCell.self, indexPath: indexPath)
-                cell.configure(with: ImageDetailsCellViewModel(imageDetails: self.viewModel.imageDetails))
-                return cell
-            case .imageInteractions:
-                let cell = tableView.dequeueReusableCell(cell: ImageInteractionsTableViewCell.self,
-                                                         indexPath: indexPath)
-                cell.configure(with: ImageInteractionsCellViewModel(imageDetails: self.viewModel.imageDetails))
-                return cell
-            }
+            return self.makeTableViewCell(for: tableView, with: type, indexPath: indexPath)
         }.disposed(by: viewModel.disposeBag)
+    }
+
+    func makeTableViewCell(for: UITableView,
+                           with type: ImageDetailsViewModel.CellType,
+                           indexPath: IndexPath) -> UITableViewCell {
+        switch type {
+        case .imageDetails:
+            let cell = tableView.dequeueReusableCell(cell: ImageDetailsTableViewCell.self, indexPath: indexPath)
+            cell.configure(with: ImageDetailsCellViewModel(imageDetails: self.viewModel.imageDetails))
+            return cell
+        case .imageInteractions:
+            let cell = tableView.dequeueReusableCell(cell: ImageInteractionsTableViewCell.self,
+                                                     indexPath: indexPath)
+            cell.configure(with: ImageInteractionsCellViewModel(imageDetails: self.viewModel.imageDetails))
+            return cell
+        }
     }
 }

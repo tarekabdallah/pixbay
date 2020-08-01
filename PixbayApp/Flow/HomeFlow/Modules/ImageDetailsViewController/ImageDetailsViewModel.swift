@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 struct ImageDetailsViewModel {
-    enum TableViewSections {
+    enum CellType {
         case imageDetails
         case imageInteractions
     }
@@ -19,5 +19,5 @@ struct ImageDetailsViewModel {
     let titleText = "image_details_scene.label.title_text".localized
     let disposeBag = DisposeBag()
     let imageDetails: ImageModel
-    var sections = BehaviorSubject<[TableViewSections]>(value: [.imageDetails, .imageInteractions])
+    var sections = BehaviorSubject<[CellType]>(value: [.imageDetails, .imageInteractions])
 }

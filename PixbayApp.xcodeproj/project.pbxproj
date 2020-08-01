@@ -32,7 +32,6 @@
 		900572A824D311D9002AE9BC /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572A524D311D9002AE9BC /* Reachability.swift */; };
 		900572A924D311D9002AE9BC /* RxSwift + URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572A624D311D9002AE9BC /* RxSwift + URLSession.swift */; };
 		900572AE24D312CF002AE9BC /* ErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572AD24D312CF002AE9BC /* ErrorCode.swift */; };
-		900572B424D3133F002AE9BC /* NetfoxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572B024D3133F002AE9BC /* NetfoxService.swift */; };
 		900572B524D3133F002AE9BC /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572B124D3133F002AE9BC /* UserSettings.swift */; };
 		900572B924D313CE002AE9BC /* UIViewController+KeyboardAvoidance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572B824D313CE002AE9BC /* UIViewController+KeyboardAvoidance.swift */; };
 		900572C124D31861002AE9BC /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900572BC24D31861002AE9BC /* Presentable.swift */; };
@@ -200,7 +199,6 @@
 		900572A524D311D9002AE9BC /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		900572A624D311D9002AE9BC /* RxSwift + URLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxSwift + URLSession.swift"; sourceTree = "<group>"; };
 		900572AD24D312CF002AE9BC /* ErrorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorCode.swift; sourceTree = "<group>"; };
-		900572B024D3133F002AE9BC /* NetfoxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetfoxService.swift; sourceTree = "<group>"; };
 		900572B124D3133F002AE9BC /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		900572B824D313CE002AE9BC /* UIViewController+KeyboardAvoidance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+KeyboardAvoidance.swift"; sourceTree = "<group>"; };
 		900572BC24D31861002AE9BC /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
@@ -448,7 +446,6 @@
 		900572AC24D3125B002AE9BC /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				900572B024D3133F002AE9BC /* NetfoxService.swift */,
 				900572B124D3133F002AE9BC /* UserSettings.swift */,
 			);
 			path = Services;
@@ -1069,7 +1066,6 @@
 				90BBCE3B24D40004006C2E69 /* UICollectionView+Extensions.swift in Sources */,
 				900572A124D31158002AE9BC /* NetworkDispatcher.swift in Sources */,
 				9038006F24D34E4E009F9033 /* RegisterViewModel.swift in Sources */,
-				900572B424D3133F002AE9BC /* NetfoxService.swift in Sources */,
 				901DDE3A24D43CEF00E4FA0E /* HasUserRepository.swift in Sources */,
 				9005725A24D30DAD002AE9BC /* AppDelegate.swift in Sources */,
 				900572C324D31861002AE9BC /* Router.swift in Sources */,

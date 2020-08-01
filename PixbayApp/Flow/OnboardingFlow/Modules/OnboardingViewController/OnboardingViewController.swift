@@ -25,6 +25,8 @@ class OnboardingViewController: UIViewController, DisplaysAlerts {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        assert(viewModel != nil, "viewModel must be set")
+
         configureViews()
     }
 

@@ -16,11 +16,14 @@ class RegisterViewController: UIViewController, DisplaysAlerts {
     @IBOutlet private weak var passwordTextField: TextField!
     @IBOutlet private weak var ageTextField: DropdownTextField!
     @IBOutlet private weak var registerButton: ActionButton!
+
     var viewModel: RegisterViewModel!
     var registeredSuccessfully: (() -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        assert(viewModel != nil, "viewModel must be set")
 
         configureViews()
     }
