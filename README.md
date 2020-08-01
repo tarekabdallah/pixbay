@@ -1,6 +1,6 @@
 # Pixbay App
 
-iOS Coding challenge Fetch Data from [Pixbay](https://pixabay.com/).
+iOS Coding challenge Fetch Data from [Pixbay](https://pixabay.com/). This Project includes some tests.
 
 [![Swift Version][swift-image]][swift-url]  [![codecov.io](https://coveralls.io/repos/github/saeed3e/Build-status-and-code-coverage-badge/badge.svg?branch=master)](https://codecov.io/gh/codecov/example-swift/branch/master)
 
