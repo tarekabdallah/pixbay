@@ -1,0 +1,44 @@
+
+private_lane :setup_variables do
+  WORKSPACE = ENV['PROJECTWORKSPACE']
+  SCHEME = ENV['SCHEME']
+  CONFIGURATION = ENV['CONFIGURATION']
+  BUILD_OUTPUT_DIRECTORY = ENV['BUILD_OUTPUT_DIRECTORY']
+  GSP_PATH = ENV['GSP_PATH']
+
+  APP_NAME = ENV['APP_NAME']
+  CI_BUILD_NUM = ENV["CIRCLE_BUILD_NUM"]
+  BUNDLE_ID = ENV["BUNDLE_ID"]
+end
+
+before_all do
+  setup_circle_ci
+  setup_variables
+end
+
+lane :release do 
+  certificates_fetch
+  increment_version_number(version_number: options[:app_version])
+  increment_build_number(build_number: options[:app_build_number])
+  build_ipa(method: "appstore", app_bundle: BUNDLE_ID)
+  upload_symbols_to_crashlytics(dsym_path: dsym_path, gsp_path: GSP_PATH)
+end
+
+desc "Fetches the certificates and provisioning profiles to run the project on real devices"
+private lane :certificates_fetch do
+  is_readonly = true
+  match(type: "appstore", app_identifier: BUNDLE_ID readonly: is_readonly)
+end
+
+after_all do
+    slack(
+      slack_url: "https://hooks.slack.com/services/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",
+      message: "✅ iOS App build uploaded to TestFlight!",
+      payload: {
+          "Version" => "#{get_version_number} (#{get_build_number})",
+          "Build Date" => Time.new.to_s,
+      },
+      default_payloads: [:git_branch, :git_author]
+    )
+  end
+end

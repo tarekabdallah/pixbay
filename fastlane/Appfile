@@ -1,0 +1,6 @@
+app_identifier("app.tarek.demo.PixbayApp") # The bundle identifier of your app
+apple_id("tarekabd1995@gmail.com") # Your Apple email address
+
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
