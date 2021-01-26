@@ -1,7 +1,7 @@
 #! groovy
 
 GITHUB_AUTHOR = "tarekabdallah"
-GITHUB_ACCESS_TOKEN = "62a094c5f685c5756a6f24ba70421b00087b12e2"
+GITHUB_ACCESS_TOKEN = "8fa0c927c5e74d41176853068778462d9cf55e9f"
 GITHUB_REPO_NAME = "pixbay"
 BUILD_CONSOLE_URL = "$BUILD_URL/console"
 
@@ -46,7 +46,7 @@ pipeline {
             steps {
                 echo "$STAGE_RELEASE_DESCRIPTION"
                 updateBuildStatus("$STATUS_PENDING", "$STAGE_RELEASE_DESCRIPTION")
-                sh "fastlane release app_version:${TAG_NAME.drop(8)}"
+                sh "fastlane release app_version:${TAG_NAME.drop(8)}    "
             }
         }
     }
