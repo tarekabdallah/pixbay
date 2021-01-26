@@ -16,7 +16,7 @@ STATUS_UNSTABLE_DESCRIPTION = "The build was unstable"
 
 STAGE_SETUP_DESCRIPTION = "Setup.."
 STAGE_BUILD_DESCRIPTION = "Building.."
-STAGE_RELEASE_DESCRIPTION = "Releasing to the Play Store.."
+STAGE_RELEASE_DESCRIPTION = "Releasing to the  AppStore.."
 
 def updateBuildStatus(String status, String description = "Jenkins") {
     sh "curl \"https://api.github.com/repos/$GITHUB_AUTHOR/$GITHUB_REPO_NAME/statuses/$GIT_COMMIT\" \
@@ -46,7 +46,7 @@ pipeline {
             steps {
                 echo "$STAGE_RELEASE_DESCRIPTION"
                 updateBuildStatus("$STATUS_PENDING", "$STAGE_RELEASE_DESCRIPTION")
-                sh "fastlane release app_version:${TAG_NAME.drop(8)}.0"
+                sh "fastlane release app_version:${TAG_NAME.drop(8)}"
             }
         }
     }
