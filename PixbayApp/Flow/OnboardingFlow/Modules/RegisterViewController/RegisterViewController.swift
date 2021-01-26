@@ -17,6 +17,7 @@ class RegisterViewController: UIViewController, DisplaysAlerts {
     @IBOutlet private weak var ageTextField: DropdownTextField!
     @IBOutlet private weak var registerButton: ActionButton!
 
+    
     var viewModel: RegisterViewModel!
     var registeredSuccessfully: (() -> Void)?
 
