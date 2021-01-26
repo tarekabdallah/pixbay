@@ -165,6 +165,7 @@
 		90BBCE4224D40BA9006C2E69 /* TagCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBCE4124D40BA9006C2E69 /* TagCellViewModel.swift */; };
 		90BBCE4624D42208006C2E69 /* InteractionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBCE4524D42207006C2E69 /* InteractionImage.swift */; };
 		90BBCE4824D422D2006C2E69 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBCE4724D422D2006C2E69 /* Int+Extensions.swift */; };
+		90CC44F025BEE83000433619 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90CC44EF25BEE83000433619 /* GoogleService-Info.plist */; };
 		A53C3127CCEA284B3E1CA075 /* Pods_PixbayApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6ADC83D3DA140057863840B /* Pods_PixbayApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -344,6 +345,7 @@
 		90BBCE4124D40BA9006C2E69 /* TagCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCellViewModel.swift; sourceTree = "<group>"; };
 		90BBCE4524D42207006C2E69 /* InteractionImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionImage.swift; sourceTree = "<group>"; };
 		90BBCE4724D422D2006C2E69 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		90CC44EF25BEE83000433619 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "PixbayApp/Resources/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C77250FD1D4777DE6CAD16B3 /* Pods_PixbayAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixbayAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6ADC83D3DA140057863840B /* Pods_PixbayApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixbayApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -410,7 +412,7 @@
 				901DDE3624D43C5800E4FA0E /* PixbayApp.xcdatamodeld */,
 			);
 			path = PixbayApp;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		9005726F24D30DAE002AE9BC /* PixbayAppTests */ = {
 			isa = PBXGroup;
@@ -658,6 +660,7 @@
 		9038000224D329A3009F9033 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				90CC44EF25BEE83000433619 /* GoogleService-Info.plist */,
 				9038002024D346FD009F9033 /* Fonts */,
 				9038000324D329B0009F9033 /* Localizable.strings */,
 				9038001724D3386A009F9033 /* Fonts.swift */,
@@ -922,6 +925,7 @@
 				9005725424D30DAD002AE9BC /* Resources */,
 				C69E044811A90DD2448786FE /* [CP] Embed Pods Frameworks */,
 				900572AB24D31243002AE9BC /* SwiftLint */,
+				90CC44F325BEE8E700433619 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1037,6 +1041,7 @@
 				9005726324D30DAE002AE9BC /* Assets.xcassets in Resources */,
 				903800A824D3F945009F9033 /* ImageDetailsViewController.storyboard in Resources */,
 				9038004424D346FD009F9033 /* Gotham-Bold 2.otf in Resources */,
+				90CC44F025BEE83000433619 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1106,6 +1111,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		90CC44F325BEE8E700433619 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		A444917A2A1244AEB96B0A70 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1420,7 +1442,8 @@
 			baseConfigurationReference = 4FC66A90AFF97F1F4A67EB15 /* Pods-PixbayApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = P5MGHMX58K;
 				INFOPLIST_FILE = PixbayApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1430,6 +1453,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.tarek.demo.PixbayApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore app.tarek.demo.PixbayApp";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1440,7 +1464,8 @@
 			baseConfigurationReference = 60D75CA18D10F176CF9DB21B /* Pods-PixbayApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = P5MGHMX58K;
 				INFOPLIST_FILE = PixbayApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1450,6 +1475,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.tarek.demo.PixbayApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore app.tarek.demo.PixbayApp";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -13,6 +13,8 @@ def shared_pods
   pod 'SwiftLint', '~> 0.39.2'
   pod 'CryptoSwift', '~> 1.3.1'
   pod 'DropDown', '~> 2.3.13'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
 end
 
 target 'PixbayApp' do

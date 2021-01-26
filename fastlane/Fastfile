@@ -7,25 +7,85 @@ private_lane :setup_variables do
   GSP_PATH = ENV['GSP_PATH']
 
   APP_NAME = ENV['APP_NAME']
-  CI_BUILD_NUM = ENV["CIRCLE_BUILD_NUM"]
   BUNDLE_ID = ENV["BUNDLE_ID"]
 end
 
 before_all do
-  setup_circle_ci
   setup_variables
 end
 
-lane :release do 
+lane :release do |options|
+  version=options[:app_version]
   certificates_fetch
-  increment_version_number(version_number: options[:app_version])
-  increment_build_number(build_number: options[:app_build_number])
-  build_ipa(method: "appstore", app_bundle: BUNDLE_ID)
+  increment_version_number(version_number: version)
+  increment_build_number(build_number: latest_testflight_build_number(version:version) + 1)
+  build_ipa(method: "app-store", app_bundle: BUNDLE_ID)
+  upload_testFlight
   upload_symbols_to_crashlytics(dsym_path: dsym_path, gsp_path: GSP_PATH)
 end
 
 desc "Fetches the certificates and provisioning profiles to run the project on real devices"
-private lane :certificates_fetch do
+lane :certificates_fetch do
   is_readonly = true
-  match(type: "appstore", app_identifier: BUNDLE_ID readonly: is_readonly)
+  match(type: "appstore", app_identifier: BUNDLE_ID, readonly: is_readonly)
 end
+
+desc "Updates the certificates and provisioning profiles"
+lane :certificates_update do
+  is_readonly = false
+  should_force = true
+    match(type: "appstore", app_identifier: BUNDLE_ID, readonly: is_readonly, force: should_force)
+end
+
+# Private lanes
+
+desc "Build IPA"
+private_lane :build_ipa do |options|
+  install_pods
+  gym(
+      workspace: WORKSPACE,
+      scheme: SCHEME,
+      configuration: CONFIGURATION,
+      export_options: {
+        method: options[:method], provisioningProfiles: {
+          options[:app_bundle] => options[:app_provisioning_profile],
+        }},
+      export_method: options[:method] || "appstore",
+      include_symbols: true,
+      output_directory: BUILD_OUTPUT_DIRECTORY,
+      output_name: ipa_name,
+      clean: true
+      )
+end
+
+desc "Install pods via bundle exec"
+private_lane :install_pods do
+  cocoapods(clean: true, use_bundle_exec: true)
+end
+
+desc "Name of IPA file"
+private_lane :ipa_name do
+  APP_NAME + ".ipa"
+end
+
+desc "Path to the IPA file"
+private_lane :ipa_path do
+  BUILD_OUTPUT_DIRECTORY + ipa_name
+end
+
+desc "Path to the DSYM zip"
+private_lane :dsym_path do
+  BUILD_OUTPUT_DIRECTORY + APP_NAME + ".app.dSYM.zip"
+end
+
+private_lane :upload_testFlight do
+    upload_to_testflight(
+    username: "tarekabd1995@gmail.com",
+    team_id: "P5MGHMX58K",
+    skip_waiting_for_build_processing: true,
+    app_identifier: BUNDLE_ID,
+    distribute_external: true,
+    notify_external_testers: true,
+    changelog: changelog_from_git_commits( commits_count: "1")
+  )
+  end

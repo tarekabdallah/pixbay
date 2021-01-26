@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="00: setup_circle_ci" time="0.000548">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="01: Switch to setup_variables lane" time="0.000176">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="02: Switch to certificates_fetch lane" time="0.000146">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="03: match" time="2.576632">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="04: increment_version_number" time="0.638798">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="05: increment_build_number" time="0.672637">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="06: Switch to build_ipa lane" time="0.000339">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="07: Switch to install_pods lane" time="0.001081">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="08: cocoapods" time="9.134646">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="09: Switch to ipa_name lane" time="0.000284">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="10: gym" time="102.743857">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="11: Switch to upload_testFlight lane" time="0.00013">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="12: changelog_from_git_commits" time="0.014919">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="13: upload_to_testflight" time="421.589443">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="14: Switch to dsym_path lane" time="0.000288">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="15: upload_symbols_to_crashlytics" time="49.967077">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

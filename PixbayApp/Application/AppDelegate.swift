@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIViewController.swizzleViewDidLoad()
 
         appCoordinator.start()
+        FirebaseApp.configure()
         return true
     }
 }

@@ -1,0 +1,7 @@
+git_url("https://github.com/tarekabdallah/pixbay-certificates.git")
+
+storage_mode("git")
+
+team_id("P5MGHMX58K")
+team_name("Tarek Abdallah")
+username("tarekabd1995@gmail.com")
