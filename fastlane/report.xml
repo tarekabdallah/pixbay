@@ -5,82 +5,87 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="00: setup_circle_ci" time="0.000548">
+      <testcase classname="fastlane.lanes" name="00: setup_circle_ci" time="0.000554">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="01: Switch to setup_variables lane" time="0.000176">
+      <testcase classname="fastlane.lanes" name="01: Switch to setup_variables lane" time="0.000174">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="02: Switch to certificates_fetch lane" time="0.000146">
+      <testcase classname="fastlane.lanes" name="02: Switch to certificates_fetch lane" time="0.000144">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="03: match" time="2.576632">
+      <testcase classname="fastlane.lanes" name="03: match" time="6.967427">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="04: increment_version_number" time="0.638798">
+      <testcase classname="fastlane.lanes" name="04: increment_version_number" time="0.718187">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="05: increment_build_number" time="0.672637">
+      <testcase classname="fastlane.lanes" name="05: latest_testflight_build_number" time="8.933464">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="06: Switch to build_ipa lane" time="0.000339">
+      <testcase classname="fastlane.lanes" name="06: increment_build_number" time="1.209023">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="07: Switch to install_pods lane" time="0.001081">
+      <testcase classname="fastlane.lanes" name="07: Switch to build_ipa lane" time="0.000685">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="08: cocoapods" time="9.134646">
+      <testcase classname="fastlane.lanes" name="08: Switch to install_pods lane" time="0.000481">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="09: Switch to ipa_name lane" time="0.000284">
+      <testcase classname="fastlane.lanes" name="09: cocoapods" time="10.790488">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="10: gym" time="102.743857">
+      <testcase classname="fastlane.lanes" name="10: Switch to ipa_name lane" time="0.000188">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="11: Switch to upload_testFlight lane" time="0.00013">
+      <testcase classname="fastlane.lanes" name="11: gym" time="113.373269">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="12: changelog_from_git_commits" time="0.014919">
+      <testcase classname="fastlane.lanes" name="12: Switch to upload_testFlight lane" time="0.000165">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="13: upload_to_testflight" time="421.589443">
+      <testcase classname="fastlane.lanes" name="13: changelog_from_git_commits" time="0.019958">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="14: Switch to dsym_path lane" time="0.000288">
+      <testcase classname="fastlane.lanes" name="14: upload_to_testflight" time="473.53218">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="15: upload_symbols_to_crashlytics" time="49.967077">
+      <testcase classname="fastlane.lanes" name="15: Switch to dsym_path lane" time="0.000294">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="16: upload_symbols_to_crashlytics" time="38.635111">
         
       </testcase>
     

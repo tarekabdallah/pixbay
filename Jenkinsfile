@@ -46,7 +46,7 @@ pipeline {
             steps {
                 echo "$STAGE_RELEASE_DESCRIPTION"
                 updateBuildStatus("$STATUS_PENDING", "$STAGE_RELEASE_DESCRIPTION")
-                tagName=$TAG_NAME.drop(8)
+                def tagName=$TAG_NAME.drop(8)
                 sh "fastlane release app_version: $tagName"
             }
         }
