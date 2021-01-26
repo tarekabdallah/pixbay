@@ -86,7 +86,6 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
-  - SwiftLint (0.39.2)
 
 DEPENDENCIES:
   - CryptoSwift (~> 1.3.1)
@@ -98,7 +97,6 @@ DEPENDENCIES:
   - NVActivityIndicatorView (~> 4.8.0)
   - RxCocoa (~> 5.1.1)
   - RxSwift (~> 5.1.1)
-  - SwiftLint (~> 0.39.2)
 
 SPEC REPOS:
   trunk:
@@ -121,7 +119,6 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
-    - SwiftLint
 
 SPEC CHECKSUMS:
   CryptoSwift: f12f037f6d0fcd6d48c96db0071b653de64e6c4d
@@ -143,8 +140,7 @@ SPEC CHECKSUMS:
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
-  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: a2330c497930049c2e69583ef16af553d02fb87d
+PODFILE CHECKSUM: bd22b7342447f51442c278cc6a661e7e1efe8c83
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1
