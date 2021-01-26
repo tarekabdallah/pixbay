@@ -19,16 +19,13 @@ STAGE_BUILD_DESCRIPTION = "Building.."
 STAGE_RELEASE_DESCRIPTION = "Releasing to the  AppStore.."
 
 def updateBuildStatus(String status, String description = "Jenkins") {
-    sh "curl \"https://api.github.com/repos/$GITHUB_AUTHOR/$GITHUB_REPO_NAME/statuses/$GIT_COMMIT\" \
-       -H \"Content-Type: application/json\" \
-       -H \"Authorization: Token $GITHUB_ACCESS_TOKEN\" \
-       -X POST \
-       -d \'{\"state\": \"$status\",\"context\": \"continuous-integration/jenkins\", \"description\": \"$description\", \"target_url\": \"$BUILD_CONSOLE_URL\"}\'"
 }
 
 pipeline {
     agent any
-
+  triggers{
+    bitbucketPush()
+  }
     stages {
         stage('Setup') {
             steps {
